@@ -1,0 +1,614 @@
+/* Google Fonts - Retro Style */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background: #0a0a1a;
+    color: #fff;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Animated Stars Background */
+.stars, .stars2, .stars3 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.stars {
+    background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="2" height="2"><circle cx="1" cy="1" r="1" fill="white"/></svg>') repeat;
+    animation: starsMove 50s linear infinite;
+}
+
+.stars2 {
+    background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="3" height="3"><circle cx="1.5" cy="1.5" r="1" fill="rgba(255,255,255,0.5)"/></svg>') repeat;
+    animation: starsMove 100s linear infinite;
+}
+
+.stars3 {
+    background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4"><circle cx="2" cy="2" r="1.5" fill="rgba(255,255,255,0.3)"/></svg>') repeat;
+    animation: starsMove 150s linear infinite;
+}
+
+@keyframes starsMove {
+    from { transform: translateY(0); }
+    to { transform: translateY(-2000px); }
+}
+
+/* Gameboy Device */
+.gameboy-device {
+    position: relative;
+    z-index: 10;
+    perspective: 1000px;
+    animation: floatDevice 6s ease-in-out infinite;
+}
+
+@keyframes floatDevice {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+.device-body {
+    width: 400px;
+    background: linear-gradient(145deg, #8b5fbf, #6b3fa0);
+    border-radius: 20px 20px 40px 40px;
+    padding: 20px;
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.5),
+        inset 0 -5px 20px rgba(0, 0, 0, 0.3),
+        inset 0 5px 20px rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+/* Screen Container */
+.screen-container {
+    background: linear-gradient(145deg, #2a2a3a, #1a1a2a);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.screen-border {
+    background: #000;
+    padding: 8px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.screen {
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(145deg, #9bbc0f, #8bac0f);
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+}
+
+/* CRT Screen Effect */
+.screen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.1) 0px,
+        rgba(0, 0, 0, 0.1) 2px,
+        transparent 2px,
+        transparent 4px
+    );
+    pointer-events: none;
+    z-index: 100;
+    animation: scanlines 8s linear infinite;
+}
+
+@keyframes scanlines {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(10px); }
+}
+
+/* Power LED */
+.power-led {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 8px;
+    height: 8px;
+    background: #ff0000;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ff0000;
+    animation: blink 2s ease-in-out infinite;
+    z-index: 101;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+.screen-label {
+    text-align: center;
+    font-size: 6px;
+    color: #666;
+    margin-top: 8px;
+    letter-spacing: 1px;
+}
+
+/* Game Screens */
+.game-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    padding: 20px;
+    color: #0f380f;
+}
+
+.game-screen.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.screen-content {
+    height: 100%;
+    overflow-y: auto;
+}
+
+/* Scrollbar styling */
+.screen-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.screen-content::-webkit-scrollbar-track {
+    background: rgba(15, 56, 15, 0.2);
+}
+
+.screen-content::-webkit-scrollbar-thumb {
+    background: #0f380f;
+    border-radius: 4px;
+}
+
+/* Home Screen */
+h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+.glitch {
+    position: relative;
+    animation: glitchText 3s infinite;
+}
+
+@keyframes glitchText {
+    0%, 90%, 100% { transform: translate(0); }
+    92% { transform: translate(-2px, 2px); }
+    94% { transform: translate(2px, -2px); }
+    96% { transform: translate(-2px, -2px); }
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 10px;
+    margin-bottom: 30px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+/* Menu */
+.menu {
+    margin: 30px auto;
+    max-width: 200px;
+}
+
+.menu-item {
+    padding: 12px;
+    margin: 8px 0;
+    background: rgba(15, 56, 15, 0.3);
+    border: 2px solid transparent;
+    cursor: pointer;
+    font-size: 10px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.menu-item:hover {
+    background: rgba(15, 56, 15, 0.5);
+    transform: translateX(5px);
+}
+
+.menu-item.active {
+    background: #0f380f;
+    border-color: #0f380f;
+    color: #9bbc0f;
+    animation: menuBlink 1s ease-in-out infinite;
+}
+
+@keyframes menuBlink {
+    0%, 100% { background: #0f380f; }
+    50% { background: rgba(15, 56, 15, 0.7); }
+}
+
+.hint {
+    text-align: center;
+    font-size: 7px;
+    margin-top: 40px;
+    opacity: 0.7;
+}
+
+/* Section Headers */
+h2 {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #0f380f;
+}
+
+/* About Screen */
+.profile-box {
+    background: rgba(15, 56, 15, 0.2);
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 2px solid #0f380f;
+}
+
+.profile-sprite {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    font-size: 8px;
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+.label {
+    color: #0f380f;
+    font-weight: bold;
+}
+
+.bio {
+    margin: 15px 0;
+}
+
+.bio p {
+    font-size: 8px;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* Projects Screen */
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.project-card {
+    background: rgba(15, 56, 15, 0.2);
+    padding: 12px;
+    border: 2px solid #0f380f;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    background: rgba(15, 56, 15, 0.4);
+    transform: translateY(-2px);
+}
+
+.project-icon {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.project-card h3 {
+    font-size: 10px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.project-card p {
+    font-size: 7px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.tags {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: #0f380f;
+    color: #9bbc0f;
+    padding: 4px 8px;
+    font-size: 6px;
+    border-radius: 3px;
+}
+
+/* Skills Screen */
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skill-name {
+    font-size: 7px;
+    min-width: 90px;
+}
+
+.skill-bar {
+    flex: 1;
+    height: 12px;
+    background: rgba(15, 56, 15, 0.3);
+    border: 2px solid #0f380f;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-fill {
+    height: 100%;
+    background: #0f380f;
+    animation: fillBar 1s ease-out;
+}
+
+@keyframes fillBar {
+    from { width: 0; }
+}
+
+.skill-level {
+    font-size: 7px;
+    min-width: 40px;
+    text-align: right;
+}
+
+/* Contact Screen */
+.contact-box {
+    text-align: center;
+}
+
+.contact-intro {
+    font-size: 9px;
+    margin-bottom: 20px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-btn {
+    display: block;
+    background: rgba(15, 56, 15, 0.3);
+    border: 2px solid #0f380f;
+    padding: 12px;
+    text-decoration: none;
+    color: #0f380f;
+    font-size: 8px;
+    transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+    background: #0f380f;
+    color: #9bbc0f;
+    transform: scale(1.05);
+}
+
+.icon {
+    font-size: 16px;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.status-message {
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(15, 56, 15, 0.2);
+    border: 2px solid #0f380f;
+}
+
+.status-message p {
+    font-size: 7px;
+    margin: 5px 0;
+}
+
+.online {
+    color: #0f380f;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Buttons */
+.btn-back {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    background: #0f380f;
+    color: #9bbc0f;
+    border: none;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+    background: rgba(15, 56, 15, 0.8);
+    transform: scale(1.1);
+}
+
+.btn-back:active {
+    transform: scale(0.95);
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+/* D-Pad */
+.dpad {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2px;
+}
+
+.dpad-btn {
+    background: linear-gradient(145deg, #2a2a3a, #1a1a2a);
+    border: none;
+    color: #666;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 
+        0 3px 0 rgba(0, 0, 0, 0.3),
+        inset 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dpad-btn:active {
+    transform: translateY(2px);
+    box-shadow: 
+        0 1px 0 rgba(0, 0, 0, 0.3),
+        inset 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.dpad-up { grid-area: 1 / 2 / 2 / 3; border-radius: 5px 5px 0 0; }
+.dpad-left { grid-area: 2 / 1 / 3 / 2; border-radius: 5px 0 0 5px; }
+.dpad-center { grid-area: 2 / 2 / 3 / 3; background: #0a0a1a; cursor: default; }
+.dpad-right { grid-area: 2 / 3 / 3 / 4; border-radius: 0 5px 5px 0; }
+.dpad-down { grid-area: 3 / 2 / 4 / 3; border-radius: 0 0 5px 5px; }
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-a, .btn-b {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 
+        0 4px 0 rgba(0, 0, 0, 0.3),
+        inset 0 -3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-a {
+    background: linear-gradient(145deg, #ff6b6b, #ee5555);
+    color: #fff;
+}
+
+.btn-b {
+    background: linear-gradient(145deg, #ffd93d, #f5c52e);
+    color: #333;
+}
+
+.btn-a:active, .btn-b:active {
+    transform: translateY(3px);
+    box-shadow: 
+        0 1px 0 rgba(0, 0, 0, 0.3),
+        inset 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo */
+.logo {
+    text-align: center;
+    font-size: 8px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 15px;
+    letter-spacing: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .device-body {
+        width: 90vw;
+        max-width: 350px;
+    }
+    
+    .screen {
+        height: 350px;
+    }
+    
+    h1 {
+        font-size: 18px;
+    }
+    
+    .controls {
+        padding: 15px 20px;
+    }
+    
+    .dpad {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .btn-a, .btn-b {
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+    }
+}
+
+/* Accessibility */
+button:focus, .menu-item:focus, .contact-btn:focus {
+    outline: 2px solid #0f380f;
+    outline-offset: 2px;
+}

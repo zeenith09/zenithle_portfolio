@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZenithLe - Space Retro Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Stars background -->
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+    
+    <!-- Gameboy Device -->
+    <div class="gameboy-device">
+        <div class="device-body">
+            <!-- Screen -->
+            <div class="screen-container">
+                <div class="screen-border">
+                    <div class="screen" id="screen">
+                        <!-- Power LED -->
+                        <div class="power-led"></div>
+                        
+                        <!-- Game Screen Content -->
+                        <div class="game-screen active" id="home-screen">
+                            <div class="screen-content">
+                                <h1 class="glitch" data-text="ZENITHLE">ZENITHLE</h1>
+                                <p class="subtitle">▸ SPACE EXPLORER ◂</p>
+                                <div class="menu">
+                                    <div class="menu-item active" data-screen="about">▸ ABOUT</div>
+                                    <div class="menu-item" data-screen="projects">▸ PROJECTS</div>
+                                    <div class="menu-item" data-screen="skills">▸ SKILLS</div>
+                                    <div class="menu-item" data-screen="contact">▸ CONTACT</div>
+                                </div>
+                                <p class="hint">USE ↑↓ ARROWS + ENTER</p>
+                            </div>
+                        </div>
+
+                        <!-- About Screen -->
+                        <div class="game-screen" id="about-screen">
+                            <div class="screen-content">
+                                <h2>◆ PLAYER PROFILE ◆</h2>
+                                <div class="profile-box">
+                                    <div class="profile-sprite">👨‍🚀</div>
+                                    <div class="profile-info">
+                                        <p><span class="label">NAME:</span> Zenith Le</p>
+                                        <p><span class="label">CLASS:</span> Developer</p>
+                                        <p><span class="label">LEVEL:</span> ∞</p>
+                                        <p><span class="label">MISSION:</span> Building awesome web experiences</p>
+                                    </div>
+                                </div>
+                                <div class="bio">
+                                    <p>🌟 Passionate about creating interactive digital experiences</p>
+                                    <p>🚀 Exploring the frontiers of web development</p>
+                                    <p>⭐ Always learning new technologies</p>
+                                </div>
+                                <button class="btn-back" onclick="goBack()">← BACK</button>
+                            </div>
+                        </div>
+
+                        <!-- Projects Screen -->
+                        <div class="game-screen" id="projects-screen">
+                            <div class="screen-content">
+                                <h2>◆ MISSION LOG ◆</h2>
+                                <div class="projects-grid">
+                                    <div class="project-card">
+                                        <div class="project-icon">🎮</div>
+                                        <h3>PROJECT ALPHA</h3>
+                                        <p>Interactive gaming platform with real-time features</p>
+                                        <div class="tags">
+                                            <span class="tag">JS</span>
+                                            <span class="tag">React</span>
+                                        </div>
+                                    </div>
+                                    <div class="project-card">
+                                        <div class="project-icon">🌐</div>
+                                        <h3>PROJECT BETA</h3>
+                                        <p>Modern web application with sleek UI/UX</p>
+                                        <div class="tags">
+                                            <span class="tag">HTML</span>
+                                            <span class="tag">CSS</span>
+                                        </div>
+                                    </div>
+                                    <div class="project-card">
+                                        <div class="project-icon">🤖</div>
+                                        <h3>PROJECT GAMMA</h3>
+                                        <p>AI-powered automation tool</p>
+                                        <div class="tags">
+                                            <span class="tag">Python</span>
+                                            <span class="tag">AI</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn-back" onclick="goBack()">← BACK</button>
+                            </div>
+                        </div>
+
+                        <!-- Skills Screen -->
+                        <div class="game-screen" id="skills-screen">
+                            <div class="screen-content">
+                                <h2>◆ SKILL STATS ◆</h2>
+                                <div class="skills-list">
+                                    <div class="skill-item">
+                                        <div class="skill-name">HTML/CSS</div>
+                                        <div class="skill-bar">
+                                            <div class="skill-fill" style="width: 90%"></div>
+                                        </div>
+                                        <div class="skill-level">LV 90</div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-name">JavaScript</div>
+                                        <div class="skill-bar">
+                                            <div class="skill-fill" style="width: 85%"></div>
+                                        </div>
+                                        <div class="skill-level">LV 85</div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-name">React</div>
+                                        <div class="skill-bar">
+                                            <div class="skill-fill" style="width: 80%"></div>
+                                        </div>
+                                        <div class="skill-level">LV 80</div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-name">Node.js</div>
+                                        <div class="skill-bar">
+                                            <div class="skill-fill" style="width: 75%"></div>
+                                        </div>
+                                        <div class="skill-level">LV 75</div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-name">Python</div>
+                                        <div class="skill-bar">
+                                            <div class="skill-fill" style="width: 70%"></div>
+                                        </div>
+                                        <div class="skill-level">LV 70</div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-name">UI/UX Design</div>
+                                        <div class="skill-bar">
+                                            <div class="skill-fill" style="width: 82%"></div>
+                                        </div>
+                                        <div class="skill-level">LV 82</div>
+                                    </div>
+                                </div>
+                                <button class="btn-back" onclick="goBack()">← BACK</button>
+                            </div>
+                        </div>
+
+                        <!-- Contact Screen -->
+                        <div class="game-screen" id="contact-screen">
+                            <div class="screen-content">
+                                <h2>◆ COMMUNICATION ◆</h2>
+                                <div class="contact-box">
+                                    <p class="contact-intro">📡 Establishing connection...</p>
+                                    <div class="contact-links">
+                                        <a href="mailto:zenith@example.com" class="contact-btn">
+                                            <span class="icon">📧</span> EMAIL
+                                        </a>
+                                        <a href="https://github.com/zeenith09" target="_blank" class="contact-btn">
+                                            <span class="icon">💻</span> GITHUB
+                                        </a>
+                                        <a href="https://linkedin.com" target="_blank" class="contact-btn">
+                                            <span class="icon">💼</span> LINKEDIN
+                                        </a>
+                                        <a href="https://twitter.com" target="_blank" class="contact-btn">
+                                            <span class="icon">🐦</span> TWITTER
+                                        </a>
+                                    </div>
+                                    <div class="status-message">
+                                        <p>STATUS: <span class="online">● ONLINE</span></p>
+                                        <p>RESPONSE TIME: ~24H</p>
+                                    </div>
+                                </div>
+                                <button class="btn-back" onclick="goBack()">← BACK</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="screen-label">DOT MATRIX WITH STEREO SOUND</div>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls">
+                <div class="dpad">
+                    <button class="dpad-btn dpad-up" onclick="navigateMenu(-1)">▲</button>
+                    <button class="dpad-btn dpad-left">◄</button>
+                    <button class="dpad-btn dpad-center"></button>
+                    <button class="dpad-btn dpad-right">►</button>
+                    <button class="dpad-btn dpad-down" onclick="navigateMenu(1)">▼</button>
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="btn-a" onclick="selectMenuItem()">A</button>
+                    <button class="btn-b" onclick="goBack()">B</button>
+                </div>
+            </div>
+
+            <!-- Logo -->
+            <div class="logo">GAME PORTFOLIO</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
