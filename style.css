@@ -192,6 +192,12 @@ body {
     border-radius: 4px;
 }
 
+/* Firefox scrollbar */
+.screen-content {
+    scrollbar-width: thin;
+    scrollbar-color: #0f380f rgba(15, 56, 15, 0.2);
+}
+
 /* Home Screen */
 h1 {
     font-size: 24px;
