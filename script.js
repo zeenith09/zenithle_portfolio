@@ -240,38 +240,31 @@ function activateEasterEgg() {
     const device = document.querySelector('.device-body');
     device.style.animation = 'rainbow 2s linear infinite';
     
-    // Add rainbow animation
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes rainbow {
-            0% { filter: hue-rotate(0deg); }
-            100% { filter: hue-rotate(360deg); }
-        }
-    `;
-    document.head.appendChild(style);
-    
-    // Play victory sound
+    // Play victory sound with separate oscillators for each note
     try {
-        const oscillator = audioContext.createOscillator();
-        const gainNode = audioContext.createGain();
-        
-        oscillator.connect(gainNode);
-        gainNode.connect(audioContext.destination);
-        
         const notes = [523, 587, 659, 784, 880, 988];
-        let time = audioContext.currentTime;
+        let delay = 0;
         
         notes.forEach(freq => {
-            oscillator.frequency.setValueAtTime(freq, time);
-            time += 0.1;
+            setTimeout(() => {
+                const oscillator = audioContext.createOscillator();
+                const gainNode = audioContext.createGain();
+                
+                oscillator.connect(gainNode);
+                gainNode.connect(audioContext.destination);
+                
+                oscillator.frequency.value = freq;
+                oscillator.type = 'square';
+                
+                gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.15);
+                
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 0.15);
+            }, delay);
+            
+            delay += 100;
         });
-        
-        oscillator.type = 'square';
-        gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
-        gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.6);
-        
-        oscillator.start(audioContext.currentTime);
-        oscillator.stop(audioContext.currentTime + 0.6);
     } catch (e) {
         console.log('Audio not available');
     }

@@ -612,3 +612,9 @@ button:focus, .menu-item:focus, .contact-btn:focus {
     outline: 2px solid #0f380f;
     outline-offset: 2px;
 }
+
+/* Easter Egg - Rainbow animation */
+@keyframes rainbow {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
