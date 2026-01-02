@@ -1,4 +1,5 @@
 import { Section } from '@/components/Section/Section'
+import { languages, tools, growing } from '@/lib/data/skills'
 import './skills.css'
 
 /**
@@ -7,16 +8,16 @@ import './skills.css'
 export function Skills() {
   const skillCategories = [
     {
-      name: 'Frontend',
-      skills: ['TODO: Skill 1', 'TODO: Skill 2', 'TODO: Skill 3'],
+      name: 'Languages',
+      skills: languages,
     },
     {
-      name: 'Backend',
-      skills: ['TODO: Skill 1', 'TODO: Skill 2', 'TODO: Skill 3'],
+      name: 'Core Tools',
+      skills: tools,
     },
     {
-      name: 'Tools',
-      skills: ['TODO: Skill 1', 'TODO: Skill 2', 'TODO: Skill 3'],
+      name: 'Learning/Growing',
+      skills: growing,
     },
   ]
 
@@ -27,13 +28,19 @@ export function Skills() {
           {skillCategories.map((category) => (
             <div key={category.name} className="skill-category">
               <h3 className="font-pixel">{category.name}</h3>
-              <ul className="skills-list">
+              <div className="skill-column-grid">
                 {category.skills.map((skill) => (
-                  <li key={skill} className="skill-item">
-                    {skill}
-                  </li>
+                  <div key={skill.name} className="skill-item">
+                    <img
+                      src={skill.logo}
+                      alt={skill.name}
+                      className="skill-icon"
+                      loading="lazy"
+                    />
+                    <span className="skill-name">{skill.name}</span>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
           ))}
         </div>
