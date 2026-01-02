@@ -2,8 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scrollbar-width: none;
+}
+
 /* CSS Variables for theming */
 :root {
+  --font-pixel: 'Press Start 2P', monospace;
   --color-bg: 255 255 255;
   --color-text: 26 26 26;
   --color-primary: 124 58 237;
@@ -26,6 +41,7 @@ html {
 
 /* Base styles */
 body {
+  font-family: var(--font-pixel), monospace;
   background-color: rgb(var(--color-bg));
   color: rgb(var(--color-text));
   transition:
@@ -33,22 +49,9 @@ body {
     color 0.3s ease;
 }
 
-/* Custom scrollbar for dark theme */
+/* Hide scrollbar (all browsers) */
 ::-webkit-scrollbar {
-  width: 12px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgb(var(--color-bg));
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgb(var(--color-primary));
-  border-radius: 6px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(var(--color-secondary));
+  display: none;
 }
 
 /* Skip to content link */
@@ -58,7 +61,7 @@ body {
   left: 0;
   background: rgb(var(--color-primary));
   color: white;
-  padding: 8px;
+  /* padding: 8px; */
   text-decoration: none;
   z-index: 100;
 }

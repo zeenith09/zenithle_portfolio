@@ -1,0 +1,66 @@
+import './footer.css'
+
+/**
+ * Footer component - Page footer with copyright and links
+ */
+export function Footer() {
+  const currentYear = new Date().getFullYear()
+
+  return (
+    <footer className="footer-container">
+      <div className="footer-content">
+        <div className="footer-grid">
+          <div className="footer-section">
+            <h4>Navigation</h4>
+            <ul>
+              <li>
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <a href="#skills">Skills</a>
+              </li>
+              <li>
+                <a href="#projects">Projects</a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="footer-section">
+            <h4>Professional</h4>
+            <ul>
+              <li>
+                <a href="#experiences">Experiences</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+              <li>
+                <a href="#">Resume</a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="footer-section">
+            <h4>Social</h4>
+            <ul>
+              <li>
+                <a href="#">GitHub</a>
+              </li>
+              <li>
+                <a href="#">LinkedIn</a>
+              </li>
+              <li>
+                <a href="#">Twitter</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          <p>© {currentYear} TODO: Your Name. Built with Next.js & React.</p>
+          <p>Retro space-themed portfolio</p>
+        </div>
+      </div>
+    </footer>
+  )
+}

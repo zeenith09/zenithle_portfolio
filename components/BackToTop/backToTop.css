@@ -1,0 +1,58 @@
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: rgb(var(--color-primary));
+  color: white;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 40;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);
+  animation: fadeInUp 0.3s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.back-to-top:hover {
+  background-color: rgb(var(--color-secondary));
+  box-shadow: 0 6px 16px rgba(124, 58, 237, 0.6);
+  transform: translateY(-2px);
+}
+
+.back-to-top:focus {
+  outline: none;
+  ring: 2px;
+  ring-color: rgb(var(--color-primary));
+  ring-offset: 2px;
+}
+
+.dark .back-to-top:hover {
+  ring-offset-color: rgb(0, 0, 0);
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+}

@@ -2,8 +2,11 @@ import { Press_Start_2P } from 'next/font/google'
 import dynamic from 'next/dynamic'
 import './globals.css'
 import { ThemeProvider } from '@/lib/hooks/useTheme'
+import { BackToTop } from '@/components/BackToTop/BackToTop'
 
-const Header = dynamic(() => import('@/components/Header').then(mod => ({ default: mod.Header })))
+const Header = dynamic(() =>
+  import('@/components/Header/Header').then((mod) => ({ default: mod.Header }))
+)
 
 const pixelFont = Press_Start_2P({
   weight: '400',
@@ -44,9 +47,12 @@ export default function RootLayout({
         <ThemeProvider>
           {/* T057: ARIA navigation landmark */}
           <Header />
-          
+
           {/* T057: ARIA main landmark for primary content */}
           {children}
+
+          {/* Back to top button */}
+          <BackToTop />
         </ThemeProvider>
       </body>
     </html>
