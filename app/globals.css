@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Variables for theming */
+:root {
+  --color-bg: 255 255 255;
+  --color-text: 26 26 26;
+  --color-primary: 124 58 237;
+  --color-secondary: 37 99 235;
+  --color-accent: 219 39 119;
+}
+
+.dark {
+  --color-bg: 0 0 0;
+  --color-text: 224 224 224;
+  --color-primary: 147 51 234;
+  --color-secondary: 59 130 246;
+  --color-accent: 236 72 153;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base styles */
+body {
+  background-color: rgb(var(--color-bg));
+  color: rgb(var(--color-text));
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--color-bg));
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--color-primary));
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--color-secondary));
+}
+
+/* Skip to content link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: rgb(var(--color-primary));
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Focus visible styles for accessibility */
+:focus-visible {
+  outline: 2px solid rgb(var(--color-primary));
+  outline-offset: 2px;
+}
