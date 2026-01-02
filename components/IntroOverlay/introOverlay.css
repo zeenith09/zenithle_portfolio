@@ -35,6 +35,24 @@
   font-size: 0.875rem;
   color: white;
   z-index: 10000;
+  max-width: 90vw;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .typewriter-container {
+    bottom: 3rem;
+    right: 1rem;
+    max-width: calc(100vw - 2rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .typewriter-container {
+    bottom: 5rem;
+    right: 0.5rem;
+    max-width: calc(100vw - 1rem);
+  }
 }
 
 .galaxy-container {
@@ -53,5 +71,25 @@
   letter-spacing: 0.05em;
   animation:
     typing 2.5s steps(23, end),
-    blink-caret 0.75s step-end infinite;
+    blink-caret 1.25s step-end infinite;
+}
+
+@media (max-width: 768px) {
+  .typewriter {
+    font-size: 0.75rem;
+    letter-spacing: 0.03em;
+    animation:
+      typing 3s steps(23, end),
+      blink-caret 1.25s step-end infinite;
+  }
+}
+
+@media (max-width: 480px) {
+  .typewriter {
+    font-size: 0.65rem;
+    letter-spacing: 0.02em;
+    animation:
+      typing 3.5s steps(23, end),
+      blink-caret 1.25s step-end infinite;
+  }
 }

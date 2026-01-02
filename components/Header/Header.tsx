@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { useScrollPosition } from '@/lib/hooks/useScrollPosition'
+import { useIsMobile } from '@/lib/hooks/useIsMobile'
 import { Navigation } from '@/components/Navigation/Navigation'
 import { MobileMenu } from '@/components/MobileMenu/MobileMenu'
 import { ThemeToggle } from '@/components/ThemeToggle/ThemeToggle'
@@ -17,6 +18,7 @@ import './header.css'
  */
 export function Header() {
   const { isScrolled } = useScrollPosition()
+  const isMobile = useIsMobile()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
 
@@ -41,7 +43,7 @@ export function Header() {
     return (
       <header className="header-wrapper">
         <div className="header-content">
-          <div className="header-logo font-pixel">PORT</div>
+          <div className="header-logo font-pixel">ZENITH LE</div>
         </div>
       </header>
     )
@@ -51,28 +53,18 @@ export function Header() {
     <header
       role="navigation"
       aria-label="Main navigation"
-      className={`header-wrapper ${isScrolled ? 'scrolled' : ''}`}
+      className={`header-wrapper ${isScrolled ? 'scrolled' : ''} ${mobileMenuOpen ? 'menu-open' : ''}`}
     >
       <div className="header-content">
         {/* Logo/Title - T034: Portfolio branding */}
-        {/* <div className="header-logo-container">
-          <a
-            href="#hero"
-            className="header-logo font-pixel"
-            onClick={(e) => {
-              e.preventDefault()
-              const element = document.getElementById('hero')
-              element?.scrollIntoView({ behavior: 'smooth' })
-            }}
-          >
-            PORT
-          </a>
-        </div> */}
+        <div className="header-logo font-pixel">ZENITH LE</div>
 
         {/* Desktop Navigation - Hidden on mobile */}
-        <div className="header-nav">
-          <Navigation isHeaderScrolled={isScrolled} />
-        </div>
+        {!isMobile && (
+          <div className="header-nav">
+            <Navigation isHeaderScrolled={isScrolled} />
+          </div>
+        )}
 
         {/* Right side: Theme toggle + Mobile menu */}
         <div className="header-actions">
@@ -80,17 +72,19 @@ export function Header() {
           <ThemeToggle />
 
           {/* Mobile Menu Toggle - Visible only on mobile */}
-          <div className="header-mobile-toggle">
-            <MobileMenu
-              isOpen={mobileMenuOpen}
-              onToggle={() => setMobileMenuOpen(!mobileMenuOpen)}
-            />
-          </div>
+          {isMobile && (
+            <div className="header-mobile-toggle">
+              <MobileMenu
+                isOpen={mobileMenuOpen}
+                onToggle={() => setMobileMenuOpen(!mobileMenuOpen)}
+              />
+            </div>
+          )}
         </div>
       </div>
 
       {/* Mobile Navigation Menu - T041: Full navigation items with close-on-navigate */}
-      {mobileMenuOpen && (
+      {isMobile && mobileMenuOpen && (
         <nav className="header-mobile-nav">
           <div className="header-mobile-nav-content">
             {[
