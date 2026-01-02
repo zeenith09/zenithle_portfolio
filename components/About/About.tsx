@@ -8,29 +8,39 @@ export function About() {
   return (
     <Section id="about" title="About" className="about-section-bg">
       <div className="about-container">
-        {/* TODO: Replace with actual biographical content */}
-        <p className="about-text">
-          This is the About section. Add your biographical information,
-          education, work experience, and current focus here.
-        </p>
-
-        <div className="about-grid">
-          <div className="about-subsection">
-            <h3 className="font-pixel">Education</h3>
-            <p>TODO: Add education details</p>
-          </div>
-          <div className="about-subsection">
-            <h3 className="font-pixel">Current Role</h3>
-            <p>TODO: Add current role information</p>
-          </div>
-        </div>
+        <h3 className="about-tagline">
+          Frontend / UI-focused Software Engineer who cares about clean
+          interfaces, accessibility, and building things people actually enjoy
+          using.
+        </h3>
 
         <div className="about-focus">
-          <h3 className="font-pixel">Current Focus</h3>
           <ul className="about-focus-list">
-            <li>TODO: Learning goal 1</li>
-            <li>TODO: Learning goal 2</li>
-            <li>TODO: Learning goal 3</li>
+            <li>
+              🔭 <strong>Currently working on</strong> Turning a Figma UI/UX
+              project into a fully functional, cross-device web application
+            </li>
+            <li>
+              🌱 <strong>Currently learning</strong> AWS and expanding my
+              back-end knowledge
+            </li>
+            <li>
+              👯 <strong>Looking to collaborate on</strong> Volunteer or
+              opportunities where design + engineering overlap
+            </li>
+            <li>
+              👨‍💻 <strong>Projects:</strong>{' '}
+              <a
+                href="https://linktr.ee/zenithle"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                linktr.ee/zenithle
+              </a>
+            </li>
+            <li>
+              📫 <strong>Reach me:</strong> zeenith.029@gmail.com
+            </li>
           </ul>
         </div>
       </div>

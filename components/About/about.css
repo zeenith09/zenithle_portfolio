@@ -1,72 +1,99 @@
 .about-section-bg {
-  background: linear-gradient(to bottom, transparent, rgba(124, 58, 237, 0.05));
+  background: linear-gradient(
+    to bottom,
+    rgba(124, 58, 237, 0.05),
+    rgba(124, 58, 237, 0.05)
+  );
 }
 
 .dark .about-section-bg {
-  background: linear-gradient(to bottom, transparent, rgba(88, 28, 135, 0.1));
+  background: linear-gradient(
+    to bottom,
+    rgba(88, 28, 135, 0.1),
+    rgba(88, 28, 135, 0.1)
+  );
 }
 
 .about-container {
-  max-width: 42rem;
+  max-width: 50rem;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 0 1rem;
+}
+
+.about-intro {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
 .about-text {
-  font-size: 1rem;
-  line-height: 1.625;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: currentColor;
 }
 
 @media (min-width: 768px) {
   .about-text {
-    font-size: 1.125rem;
+    font-size: 1.05rem;
   }
 }
 
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  margin-top: 2rem;
+.about-tagline {
+  font-size: 1.125rem;
+  font-family: var(--font-pixel), monospace;
+  line-height: 1.6;
+  padding: 1.5rem;
+  background-color: rgba(124, 58, 237, 0.1);
+  border-left: 3px solid var(--color-primary);
+  color: currentColor;
+}
+
+.dark .about-tagline {
+  background-color: rgba(88, 28, 135, 0.2);
 }
 
 @media (min-width: 768px) {
-  .about-grid {
-    grid-template-columns: 1fr 1fr;
+  .about-tagline {
+    font-size: 1.25rem;
+    padding: 2rem;
   }
 }
 
-.about-subsection {
+.about-focus {
   display: flex;
   flex-direction: column;
-}
-
-.about-subsection h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.75rem;
-}
-
-.about-subsection p {
-  font-size: 0.875rem;
-}
-
-.about-focus {
-  margin-top: 2rem;
-}
-
-.about-focus h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.75rem;
-  margin-top: 2rem;
+  gap: 1rem;
 }
 
 .about-focus-list {
-  list-style: disc;
-  list-style-position: inside;
+  list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  font-size: 0.875rem;
+  gap: 1.25rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.about-focus-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.about-focus-list li strong {
+  font-weight: 600;
+}
+
+.about-focus-list a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.about-focus-list a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
 }

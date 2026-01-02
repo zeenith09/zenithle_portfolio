@@ -1,9 +1,17 @@
 .projects-section-bg {
-  background: linear-gradient(to bottom, transparent, rgba(236, 72, 153, 0.05));
+  background: linear-gradient(
+    to bottom,
+    rgba(59, 130, 246, 0.05),
+    rgba(236, 72, 153, 0.05)
+  );
 }
 
 .dark .projects-section-bg {
-  background: linear-gradient(to bottom, transparent, rgba(157, 23, 77, 0.1));
+  background: linear-gradient(
+    to bottom,
+    rgba(30, 58, 138, 0.1),
+    rgba(157, 23, 77, 0.1)
+  );
 }
 
 .projects-container {

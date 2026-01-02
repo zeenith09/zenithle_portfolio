@@ -9,6 +9,14 @@
   padding-bottom: 3rem;
 }
 
+.section-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .section-title {
   font-size: 2.25rem;
   font-family: var(--font-pixel), monospace;

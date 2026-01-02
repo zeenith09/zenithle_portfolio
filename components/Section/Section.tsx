@@ -74,18 +74,21 @@ export function Section({ id, title, children, className = '' }: SectionProps) {
       ref={ref}
       id={id}
       className={`section-wrapper ${className}`}
-      variants={id === 'hero' ? {} : variants}
-      initial="hidden"
-      animate={id === 'hero' ? 'visible' : isInView ? 'visible' : 'exit'}
-      // T029: Optimized viewport and margin settings
-      viewport={{
-        once: false,
-        amount: 0.25,
-        margin: '0px 0px -100px 0px',
-      }}
     >
-      {title && <h2 className="section-title font-pixel">{title}</h2>}
-      {children}
+      <motion.div
+        className="section-content"
+        variants={id === 'hero' ? {} : variants}
+        initial="hidden"
+        animate={id === 'hero' ? 'visible' : isInView ? 'visible' : 'exit'}
+        viewport={{
+          once: false,
+          amount: 0.25,
+          margin: '0px 0px -100px 0px',
+        }}
+      >
+        {title && <h2 className="section-title font-pixel">{title}</h2>}
+        {children}
+      </motion.div>
     </motion.section>
   )
 }

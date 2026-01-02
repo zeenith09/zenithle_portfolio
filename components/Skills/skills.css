@@ -1,9 +1,17 @@
 .skills-section-bg {
-  background: linear-gradient(to bottom, transparent, rgba(59, 130, 246, 0.05));
+  background: linear-gradient(
+    to bottom,
+    rgba(124, 58, 237, 0.05),
+    rgba(59, 130, 246, 0.05)
+  );
 }
 
 .dark .skills-section-bg {
-  background: linear-gradient(to bottom, transparent, rgba(30, 58, 138, 0.1));
+  background: linear-gradient(
+    to bottom,
+    rgba(88, 28, 135, 0.1),
+    rgba(30, 58, 138, 0.1)
+  );
 }
 
 .skills-container {
