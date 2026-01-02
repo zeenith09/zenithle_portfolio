@@ -28,7 +28,9 @@ html {
 body {
   background-color: rgb(var(--color-bg));
   color: rgb(var(--color-text));
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 /* Custom scrollbar for dark theme */

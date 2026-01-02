@@ -13,8 +13,8 @@ export function About() {
       <div className="max-w-3xl mx-auto space-y-6">
         {/* TODO: Replace with actual biographical content */}
         <p className="text-base md:text-lg leading-relaxed">
-          This is the About section. Add your biographical information, education,
-          work experience, and current focus here.
+          This is the About section. Add your biographical information,
+          education, work experience, and current focus here.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">

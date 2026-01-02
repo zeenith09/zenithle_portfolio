@@ -73,9 +73,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-current pt-6 text-center text-xs">
-          <p>
-            © {currentYear} TODO: Your Name. Built with Next.js & React.
-          </p>
+          <p>© {currentYear} TODO: Your Name. Built with Next.js & React.</p>
           <p className="mt-2 text-retro-secondary text-xs">
             Retro space-themed portfolio
           </p>
