@@ -1,8 +1,21 @@
+import { Hero } from '@/components/Hero'
+import { About } from '@/components/About'
+import { Skills } from '@/components/Skills'
+import { Projects } from '@/components/Projects'
+import { Experiences } from '@/components/Experiences'
+import { Contact } from '@/components/Contact'
+import { Footer } from '@/components/Footer'
+
 export default function Home() {
   return (
-    <main id="main-content" className="min-h-screen">
-      <h1 className="text-4xl p-8">Portfolio Website - Setup Complete</h1>
-      <p className="px-8">Next.js + TypeScript + Tailwind CSS is ready!</p>
+    <main id="main-content">
+      <Hero />
+      <About />
+      <Skills />
+      <Projects />
+      <Experiences />
+      <Contact />
+      <Footer />
     </main>
   )
 }
