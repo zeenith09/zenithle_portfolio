@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { useScrollPosition } from '@/lib/hooks/useScrollPosition'
 import { Navigation } from '@/components/Navigation'
 import { MobileMenu } from '@/components/MobileMenu'
+import { ThemeToggle } from '@/components/ThemeToggle'
 
 /**
  * Header component - Fixed navigation bar with scroll detection
@@ -11,6 +12,7 @@ import { MobileMenu } from '@/components/MobileMenu'
  * T033: Transparent-to-solid background based on scroll position
  * T034: Portfolio logo/title on left, always visible
  * T040: Show/hide tabs based on header background state
+ * T050: ThemeToggle integrated into header navigation (desktop and mobile)
  */
 export function Header() {
   const { isScrolled } = useScrollPosition()
@@ -69,16 +71,22 @@ export function Header() {
         </div>
 
         {/* Desktop Navigation - Hidden on mobile */}
-        <div className="hidden md:block flex-1 mx-8">
+        <div className="hidden md:flex flex-1 mx-8 items-center justify-center">
           <Navigation isHeaderScrolled={isScrolled} />
         </div>
 
-        {/* Mobile Menu Toggle - Visible only on mobile */}
-        <div className="md:hidden">
-          <MobileMenu
-            isOpen={mobileMenuOpen}
-            onToggle={() => setMobileMenuOpen(!mobileMenuOpen)}
-          />
+        {/* Right side: Theme toggle + Mobile menu */}
+        <div className="flex items-center gap-2">
+          {/* T050: ThemeToggle in header navigation (visible on all screen sizes) */}
+          <ThemeToggle />
+
+          {/* Mobile Menu Toggle - Visible only on mobile */}
+          <div className="md:hidden">
+            <MobileMenu
+              isOpen={mobileMenuOpen}
+              onToggle={() => setMobileMenuOpen(!mobileMenuOpen)}
+            />
+          </div>
         </div>
       </div>
 
