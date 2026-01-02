@@ -74,9 +74,9 @@ export function Section({ id, title, children, className = '' }: SectionProps) {
       ref={ref}
       id={id}
       className={`section-wrapper ${className}`}
-      variants={variants}
+      variants={id === 'hero' ? {} : variants}
       initial="hidden"
-      animate={isInView ? 'visible' : 'exit'}
+      animate={id === 'hero' ? 'visible' : isInView ? 'visible' : 'exit'}
       // T029: Optimized viewport and margin settings
       viewport={{
         once: false,

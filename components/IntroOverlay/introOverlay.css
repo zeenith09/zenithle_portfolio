@@ -8,6 +8,20 @@
   background-color: black;
 }
 
+.intro-overlay.fade-out {
+  animation: fade-out 0.5s ease-out forwards;
+}
+
+/* Fade out animation */
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 /* Typewriter animation */
 @keyframes typing {
   from {

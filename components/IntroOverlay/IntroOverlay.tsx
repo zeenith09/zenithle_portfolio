@@ -6,6 +6,7 @@ import './introOverlay.css'
 
 export function IntroOverlay() {
   const [visible, setVisible] = useState(true)
+  const [isClosing, setIsClosing] = useState(false)
 
   useEffect(() => {
     if (!visible) return
@@ -15,10 +16,22 @@ export function IntroOverlay() {
     }
   }, [visible])
 
+  const handleClick = () => {
+    setIsClosing(true)
+    setTimeout(() => {
+      setVisible(false)
+      const heroElement = document.getElementById('hero')
+      heroElement?.scrollIntoView({ behavior: 'smooth' })
+    }, 500) // Wait for fade-out animation to complete
+  }
+
   if (!visible) return null
 
   return (
-    <div className="intro-overlay" onClick={() => setVisible(false)}>
+    <div
+      className={`intro-overlay ${isClosing ? 'fade-out' : ''}`}
+      onClick={handleClick}
+    >
       {/* Typewriter text - positioned at bottom right */}
       <div className="typewriter-container">
         <p className="typewriter">Click anywhere to begin</p>

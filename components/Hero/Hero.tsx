@@ -1,6 +1,5 @@
 import { Section } from '@/components/Section/Section'
 import { IntroOverlay } from '@/components/IntroOverlay/IntroOverlay'
-import Galaxy from '@/components/Galaxy/Galaxy'
 import './hero.css'
 
 /**
