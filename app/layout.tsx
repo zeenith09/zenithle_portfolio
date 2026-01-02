@@ -1,5 +1,6 @@
 import { Press_Start_2P } from 'next/font/google'
 import './globals.css'
+import { ThemeProvider } from '@/lib/hooks/useTheme'
 
 const pixelFont = Press_Start_2P({
   weight: '400',
@@ -35,7 +36,7 @@ export default function RootLayout({
         <a href="#main-content" className="skip-link sr-only focus:not-sr-only">
           Skip to content
         </a>
-        {children}
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   )
