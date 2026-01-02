@@ -36,11 +36,16 @@ export default function RootLayout({
         />
       </head>
       <body className={pixelFont.variable}>
+        {/* T056: Skip-to-content link for keyboard users */}
         <a href="#main-content" className="skip-link sr-only focus:not-sr-only">
-          Skip to content
+          Skip to main content
         </a>
+
         <ThemeProvider>
+          {/* T057: ARIA navigation landmark */}
           <Header />
+          
+          {/* T057: ARIA main landmark for primary content */}
           {children}
         </ThemeProvider>
       </body>
