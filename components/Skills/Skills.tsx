@@ -1,4 +1,7 @@
+'use client'
+
 import { Section } from '@/components/Section/Section'
+import { useIsMobile } from '@/lib/hooks/useIsMobile'
 import { languages, tools, growing } from '@/lib/data/skills'
 import './skills.css'
 
@@ -6,6 +9,7 @@ import './skills.css'
  * Skills section - Technical skills organized by category
  */
 export function Skills() {
+  const isMobile = useIsMobile()
   const skillCategories = [
     {
       name: 'Languages',

@@ -19,17 +19,32 @@
   margin: 0 auto;
   width: 100%;
   padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .skills-container {
+    padding: 0 1.5rem;
+  }
 }
 
 .skills-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3rem;
+  gap: 2rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
   .skills-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
   }
 }
 
@@ -40,10 +55,11 @@
 }
 
 .skill-category h3 {
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-family: var(--font-pixel), monospace;
   color: var(--color-primary);
   text-align: center;
+  margin: 0;
 }
 
 @media (min-width: 768px) {
@@ -55,12 +71,13 @@
 .skill-column-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  gap: 0.75rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .skill-column-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 }
 
@@ -68,26 +85,50 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.75rem;
-  padding: 1rem;
+  gap: 0.5rem;
+  padding: 0.75rem;
   border: 2px solid currentColor;
   border-radius: 0.25rem;
   transition: all 0.3s ease;
   text-align: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .skill-item {
+    gap: 0.75rem;
+    padding: 1rem;
+  }
 }
 
 .skill-icon {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   object-fit: contain;
   filter: drop-shadow(0 0 4px rgba(124, 58, 237, 0.15));
   transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .skill-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }
 
 .skill-item:hover .skill-icon {
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   filter: drop-shadow(0 0 24px rgba(89, 43, 168, 0.712));
+}
+
+@media (min-width: 768px) {
+  .skill-item:hover .skill-icon {
+    width: 3rem;
+    height: 3rem;
+  }
 }
 
 .dark .skill-item:hover .skill-icon {
@@ -95,6 +136,13 @@
 }
 
 .skill-name {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 600;
+  word-break: break-word;
+}
+
+@media (min-width: 768px) {
+  .skill-name {
+    font-size: 0.875rem;
+  }
 }

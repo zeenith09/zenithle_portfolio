@@ -22,3 +22,7 @@
   background-color: currentColor;
   border-radius: 0.125rem;
 }
+
+.dark .menu-line {
+  background-color: white;
+}

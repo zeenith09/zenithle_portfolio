@@ -1,10 +1,14 @@
+'use client'
+
 import { Section } from '@/components/Section/Section'
+import { useIsMobile } from '@/lib/hooks/useIsMobile'
 import './about.css'
 
 /**
  * About section - Biographical information
  */
 export function About() {
+  const isMobile = useIsMobile()
   return (
     <Section id="about" title="About" className="about-section-bg">
       <div className="about-container">
@@ -25,8 +29,8 @@ export function About() {
               back-end knowledge
             </li>
             <li>
-              👯 <strong>Looking to collaborate on</strong> Volunteer or
-              opportunities where design + engineering overlap
+              👯 <strong>Looking for</strong> Volunteer or opportunities where
+              design + engineering overlap
             </li>
             <li>
               👨‍💻 <strong>Projects:</strong>{' '}

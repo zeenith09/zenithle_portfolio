@@ -31,8 +31,8 @@ export function Section({ id, title, children, className = '' }: SectionProps) {
   // Triggers animation when 25% of section is visible
   const isInView = useInView(ref, {
     once: false,
-    amount: 0.25,
-    margin: '0px 0px -100px 0px', // Extends detection 100px below viewport
+    amount: 0.1,
+    margin: '0px 0px -50px 0px', // Adjusted for better mobile detection
   })
   const prefersReducedMotion = useReducedMotion()
 
@@ -82,8 +82,8 @@ export function Section({ id, title, children, className = '' }: SectionProps) {
         animate={id === 'hero' ? 'visible' : isInView ? 'visible' : 'exit'}
         viewport={{
           once: false,
-          amount: 0.25,
-          margin: '0px 0px -100px 0px',
+          amount: 0.1,
+          margin: '0px 0px -50px 0px',
         }}
       >
         {title && <h2 className="section-title font-pixel">{title}</h2>}
