@@ -1,7 +1,10 @@
 .footer-container {
-  border-top: 2px solid currentColor;
-  background-color: rgba(124, 58, 237, 0.05);
+  background: transparent;
   padding: 2rem 0;
+}
+
+.dark .footer-container {
+  background: transparent;
 }
 
 .footer-content {
@@ -21,6 +24,14 @@
   .footer-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .footer-section h4 {

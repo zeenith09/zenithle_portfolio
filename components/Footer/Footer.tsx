@@ -57,8 +57,8 @@ export function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>© {currentYear} TODO: Your Name. Built with Next.js & React.</p>
-          <p>Retro space-themed portfolio</p>
+          <p>© {currentYear} Zenith Le's Portfolio</p>
+          <p>Built with Next.js & React</p>
         </div>
       </div>
     </footer>
