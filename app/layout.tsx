@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic'
 import './globals.css'
 import { ThemeProvider } from '@/lib/hooks/useTheme'
 import { BackToTop } from '@/components/BackToTop/BackToTop'
+import { ParticlesBackground } from '@/components/ParticlesBackground/ParticlesBackground'
 
 const Header = dynamic(() =>
   import('@/components/Header/Header').then((mod) => ({ default: mod.Header }))
@@ -39,19 +40,17 @@ export default function RootLayout({
         />
       </head>
       <body className={pixelFont.variable}>
-        {/* T056: Skip-to-content link for keyboard users */}
+        <ParticlesBackground />
+
         <a href="#main-content" className="skip-link sr-only focus:not-sr-only">
           Skip to main content
         </a>
 
         <ThemeProvider>
-          {/* T057: ARIA navigation landmark */}
           <Header />
 
-          {/* T057: ARIA main landmark for primary content */}
           {children}
 
-          {/* Back to top button */}
           <BackToTop />
         </ThemeProvider>
       </body>

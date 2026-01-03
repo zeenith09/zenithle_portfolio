@@ -16,6 +16,11 @@ body {
   scrollbar-width: none;
 }
 
+main {
+  position: relative;
+  z-index: 1;
+}
+
 /* CSS Variables for theming */
 :root {
   --font-pixel: 'Press Start 2P', monospace;
