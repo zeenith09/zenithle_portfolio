@@ -1,28 +1,11 @@
 import { Section } from '@/components/Section/Section'
+import { projects } from '@/lib/data/projects'
 import './projects.css'
 
 /**
  * Projects section - Portfolio projects showcase
  */
 export function Projects() {
-  const projects = [
-    {
-      title: 'Project 1',
-      description: 'TODO: Add project description',
-      technologies: ['TODO: Tech 1', 'TODO: Tech 2'],
-    },
-    {
-      title: 'Project 2',
-      description: 'TODO: Add project description',
-      technologies: ['TODO: Tech 1', 'TODO: Tech 2'],
-    },
-    {
-      title: 'Project 3',
-      description: 'TODO: Add project description',
-      technologies: ['TODO: Tech 1', 'TODO: Tech 2'],
-    },
-  ]
-
   return (
     <Section
       id="projects"
@@ -43,8 +26,16 @@ export function Projects() {
                 ))}
               </div>
               <div className="project-links">
-                <a href="#">Live</a>
-                <a href="#">GitHub</a>
+                {project.links.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {link.label}
+                  </a>
+                ))}
               </div>
             </div>
           ))}

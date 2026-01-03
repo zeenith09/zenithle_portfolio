@@ -44,6 +44,7 @@ body {
   font-family: var(--font-pixel), monospace;
   background-color: rgb(var(--color-bg));
   color: rgb(var(--color-text));
+  line-height: 1.8;
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
