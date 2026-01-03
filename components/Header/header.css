@@ -28,7 +28,8 @@
   justify-content: space-between;
 }
 
-@media (min-width: 768px) {
+/* 950 instead of 768 for surface pros */
+@media (min-width: 950px) {
   .header-content {
     padding: 1rem 1.5rem;
   }
@@ -42,7 +43,7 @@
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 950px) {
   .header-nav {
     display: flex;
     flex: 1;

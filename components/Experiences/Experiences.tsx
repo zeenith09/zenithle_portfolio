@@ -32,7 +32,7 @@ export function Experiences() {
   return (
     <Section
       id="experiences"
-      title="Experiences"
+      title="Experience"
       className="experiences-section-bg"
     >
       <div className="experiences-container">
