@@ -5,9 +5,6 @@ import { useIsMobile } from '@/lib/hooks/useIsMobile'
 import { languages, tools, growing } from '@/lib/data/skills'
 import './skills.css'
 
-/**
- * Skills section - Technical skills organized by category
- */
 export function Skills() {
   const isMobile = useIsMobile()
   const skillCategories = [

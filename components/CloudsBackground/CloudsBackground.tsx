@@ -1,9 +1,9 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import Particles from '@/components/ParticlesBackground/Particles/Particles'
+import { Clouds } from './Clouds/Clouds'
 
-export function ParticlesBackground() {
+export function CloudsBackground() {
   const [isDarkMode, setIsDarkMode] = useState(false)
 
   useEffect(() => {
@@ -22,27 +22,12 @@ export function ParticlesBackground() {
   return (
     <div
       style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        zIndex: 0,
-        pointerEvents: 'none',
-        opacity: isDarkMode ? 1 : 0,
+        opacity: !isDarkMode ? 1 : 0,
         transition: 'opacity 0.3s ease-in-out',
+        pointerEvents: !isDarkMode ? 'auto' : 'none',
       }}
     >
-      <Particles
-        particleColors={['#ffffff', '#ffffff']}
-        particleCount={200}
-        particleSpread={10}
-        speed={0.1}
-        particleBaseSize={100}
-        moveParticlesOnHover={true}
-        alphaParticles={false}
-        disableRotation={false}
-      />
+      <Clouds />
     </div>
   )
 }

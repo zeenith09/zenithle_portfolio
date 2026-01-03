@@ -32,7 +32,6 @@ export function IntroOverlay() {
       className={`intro-overlay ${isClosing ? 'fade-out' : ''}`}
       onClick={handleClick}
     >
-      {/* Typewriter text - positioned at bottom right */}
       <div className="typewriter-container">
         <p className="typewriter">Click anywhere to begin</p>
       </div>

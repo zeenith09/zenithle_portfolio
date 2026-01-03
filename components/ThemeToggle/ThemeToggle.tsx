@@ -5,13 +5,6 @@ import { useTheme } from '@/lib/hooks/useTheme'
 import { useEffect, useState } from 'react'
 import './themeToggle.css'
 
-/**
- * ThemeToggle component - Dark/light mode switcher with icon animation
- * T046: Theme toggle button with moon/sun icon
- * T048: Smooth icon rotation animation (moon ↔ sun)
- * T053: Keyboard accessibility (Tab + Enter/Space)
- * T054: ARIA label with current state
- */
 export function ThemeToggle() {
   const { isDark, toggleTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
@@ -38,9 +31,7 @@ export function ThemeToggle() {
     <button
       onClick={toggleTheme}
       className="theme-toggle-button"
-      // T054: ARIA label with current state
       aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-      // T053: Keyboard accessibility via onClick handler and semantic button
       type="button"
     >
       <motion.div

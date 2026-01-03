@@ -9,14 +9,6 @@ interface NavigationProps {
   isHeaderScrolled: boolean
 }
 
-/**
- * Navigation component - Desktop tab layout with scroll-based active highlighting
- * T035: Desktop tab layout for navigation items
- * T037: Wire navigation items to smooth scroll behavior
- * T038: Active section highlighting based on scroll position
- * T042: Keyboard navigation support (Tab + Enter/Space)
- * T044: Visible focus states for keyboard navigation
- */
 export function Navigation({ isHeaderScrolled }: NavigationProps) {
   const { activeSection } = useScrollPosition()
   const [mounted, setMounted] = useState(false)

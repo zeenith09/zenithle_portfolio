@@ -4,6 +4,7 @@ import './globals.css'
 import { ThemeProvider } from '@/lib/hooks/useTheme'
 import { BackToTop } from '@/components/BackToTop/BackToTop'
 import { ParticlesBackground } from '@/components/ParticlesBackground/ParticlesBackground'
+import { CloudsBackground } from '@/components/CloudsBackground/CloudsBackground'
 
 const Header = dynamic(() =>
   import('@/components/Header/Header').then((mod) => ({ default: mod.Header }))
@@ -41,6 +42,7 @@ export default function RootLayout({
       </head>
       <body className={pixelFont.variable}>
         <ParticlesBackground />
+        <CloudsBackground />
 
         <a href="#main-content" className="skip-link sr-only focus:not-sr-only">
           Skip to main content

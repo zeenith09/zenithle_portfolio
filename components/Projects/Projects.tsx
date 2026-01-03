@@ -2,9 +2,6 @@ import { Section } from '@/components/Section/Section'
 import { projects } from '@/lib/data/projects'
 import './projects.css'
 
-/**
- * Projects section - Portfolio projects showcase
- */
 export function Projects() {
   return (
     <Section

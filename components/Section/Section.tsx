@@ -13,18 +13,6 @@ interface SectionProps {
   className?: string
 }
 
-/**
- * Reusable Section wrapper component with fade animations
- * T027: Scroll-based fade-out effect on previous sections
- * T028: Fade-in and subtle movement on incoming sections
- * T029: Optimized Intersection Observer thresholds for smooth transitions
- * T030: Respects prefers-reduced-motion accessibility setting
- *
- * Animation states:
- * - hidden: Section below viewport (opacity 0, y offset)
- * - visible: Section in viewport (opacity 1, y 0)
- * - exit: Section above viewport (reduced opacity for fade effect)
- */
 export function Section({ id, title, children, className = '' }: SectionProps) {
   const ref = useRef(null)
   // T029: Tuned threshold to 0.25 for smooth entrance detection

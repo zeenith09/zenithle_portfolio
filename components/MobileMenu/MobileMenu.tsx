@@ -35,12 +35,10 @@ export function MobileMenu({ isOpen, onToggle }: MobileMenuProps) {
     <button
       onClick={onToggle}
       className="mobile-menu-button"
-      // T043: ARIA labels for accessibility
       aria-expanded={isOpen}
       aria-controls="mobile-menu"
       aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
     >
-      {/* Hamburger icon with animation */}
       <motion.div
         className="menu-line"
         animate={isOpen ? 'open' : 'closed'}

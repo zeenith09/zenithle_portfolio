@@ -1,8 +1,5 @@
 import './footer.css'
 
-/**
- * Footer component - Page footer with copyright and links
- */
 export function Footer() {
   const currentYear = new Date().getFullYear()
 

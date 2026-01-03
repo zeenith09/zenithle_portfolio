@@ -1,9 +1,8 @@
+'use client'
+
 import { Section } from '@/components/Section/Section'
 import './contact.css'
 
-/**
- * Contact section - Call-to-action and contact information
- */
 export function Contact() {
   return (
     <Section id="contact" title="Get In Touch" className="contact-section-bg">
@@ -14,10 +13,13 @@ export function Contact() {
           <a href="mailto:TODO@example.com" className="contact-button">
             Email
           </a>
-          <a href="#" className="contact-button">
+          <a href="https://github.com/zeenith09" className="contact-button">
             GitHub
           </a>
-          <a href="#" className="contact-button">
+          <a
+            href="https://www.linkedin.com/in/zenithle"
+            className="contact-button"
+          >
             LinkedIn
           </a>
         </div>

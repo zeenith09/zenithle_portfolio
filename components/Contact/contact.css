@@ -43,11 +43,19 @@
   font-family: var(--font-pixel), monospace;
   font-size: 0.875rem;
   transition: all 0.3s ease;
+  color: currentColor;
 }
 
 .contact-button:hover {
   background-color: var(--color-primary);
-  color: white;
+  color: black;
+  border-color: var(--color-primary);
+}
+
+.dark .contact-button:hover {
+  background-color: var(--color-primary);
+  color: rgb(175, 201, 255);
+  border-color: var(--color-primary);
 }
 
 .contact-footer {

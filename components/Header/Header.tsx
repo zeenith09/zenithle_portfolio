@@ -56,22 +56,17 @@ export function Header() {
       className={`header-wrapper ${isScrolled ? 'scrolled' : ''} ${mobileMenuOpen ? 'menu-open' : ''}`}
     >
       <div className="header-content">
-        {/* Logo/Title - T034: Portfolio branding */}
         <div className="header-logo font-pixel">ZENITH LE</div>
 
-        {/* Desktop Navigation - Hidden on mobile */}
         {!isMobile && (
           <div className="header-nav">
             <Navigation isHeaderScrolled={isScrolled} />
           </div>
         )}
 
-        {/* Right side: Theme toggle + Mobile menu */}
         <div className="header-actions">
-          {/* T050: ThemeToggle in header navigation (visible on all screen sizes) */}
           <ThemeToggle />
 
-          {/* Mobile Menu Toggle - Visible only on mobile */}
           {isMobile && (
             <div className="header-mobile-toggle">
               <MobileMenu
@@ -83,7 +78,6 @@ export function Header() {
         </div>
       </div>
 
-      {/* Mobile Navigation Menu - T041: Full navigation items with close-on-navigate */}
       {isMobile && mobileMenuOpen && (
         <nav className="header-mobile-nav">
           <div className="header-mobile-nav-content">

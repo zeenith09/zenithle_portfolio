@@ -1,9 +1,6 @@
 import { Section } from '@/components/Section/Section'
 import './experiences.css'
 
-/**
- * Experiences section - Work history and professional timeline
- */
 export function Experiences() {
   const experiences = [
     {
