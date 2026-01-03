@@ -1,8 +1,8 @@
 .skills-section-bg {
   background: linear-gradient(
     to bottom,
-    rgba(124, 58, 237, 0.05),
-    rgba(59, 130, 246, 0.05)
+    rgba(124, 58, 237, 0.01),
+    rgba(59, 130, 246, 0.01)
   );
 }
 

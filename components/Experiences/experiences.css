@@ -1,8 +1,8 @@
 .experiences-section-bg {
   background: linear-gradient(
     to bottom,
-    rgba(236, 72, 153, 0.05),
-    rgba(139, 92, 246, 0.05)
+    rgba(236, 72, 153, 0.01),
+    rgba(139, 92, 246, 0.01)
   );
 }
 
