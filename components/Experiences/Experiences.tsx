@@ -27,11 +27,7 @@ export function Experiences() {
   ]
 
   return (
-    <Section
-      id="experiences"
-      title="Experience"
-      className="experiences-section-bg"
-    >
+    <Section id="experiences" title="Experience">
       <div className="experiences-container">
         <div className="experiences-list">
           {experiences.map((exp, idx) => (

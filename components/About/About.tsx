@@ -10,7 +10,7 @@ import './about.css'
 export function About() {
   const isMobile = useIsMobile()
   return (
-    <Section id="about" title="About" className="about-section-bg">
+    <Section id="about" title="About">
       <div className="about-container">
         <h3 className="about-tagline">
           Frontend / UI-focused Software Engineer who cares about clean

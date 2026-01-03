@@ -1,11 +1,3 @@
-.contact-section-bg {
-  background: linear-gradient(to bottom, rgba(139, 92, 246, 0.01), transparent);
-}
-
-.dark .contact-section-bg {
-  background: linear-gradient(to bottom, rgba(109, 40, 217, 0.01), transparent);
-}
-
 .contact-container {
   max-width: 42rem;
   margin: 0 auto;

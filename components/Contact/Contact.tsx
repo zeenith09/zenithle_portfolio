@@ -5,7 +5,7 @@ import './contact.css'
 
 export function Contact() {
   return (
-    <Section id="contact" title="Get In Touch" className="contact-section-bg">
+    <Section id="contact" title="Get In Touch">
       <div className="contact-container">
         <p className="contact-message">TODO: Add contact message/CTA</p>
 

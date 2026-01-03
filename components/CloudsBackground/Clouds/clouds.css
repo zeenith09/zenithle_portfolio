@@ -17,9 +17,10 @@
   overflow: hidden;
   pointer-events: none;
   background: linear-gradient(
-    180deg,
-    rgba(200, 220, 255, 0.3) 0%,
-    rgba(255, 255, 255, 0.1) 100%
+    to bottom,
+    rgba(236, 72, 153, 0.07) 0%,
+    rgba(124, 58, 237, 0.07) 50%,
+    rgba(200, 220, 255, 0.7) 100%
   );
 }
 
@@ -36,28 +37,38 @@
   background-image: url('/assets/cloud1.png');
   width: 700px;
   height: 250px;
+  opacity: 1;
+  filter: brightness(4) saturate(2) drop-shadow(0 0 15px rgba(255, 255, 255, 1));
 }
 
 .cloud2 {
   background-image: url('/assets/cloud2.png');
   width: 680px;
   height: 240px;
+  opacity: 1;
+  filter: brightness(4) saturate(2) drop-shadow(0 0 15px rgba(255, 255, 255, 1));
 }
 
 .cloud3 {
   background-image: url('/assets/cloud3.png');
   width: 720px;
   height: 260px;
+  opacity: 1;
+  filter: brightness(4) saturate(2) drop-shadow(0 0 15px rgba(255, 255, 255, 1));
 }
 
 .cloud4 {
   background-image: url('/assets/cloud4.png');
   width: 690px;
   height: 245px;
+  opacity: 1;
+  filter: brightness(4) saturate(2) drop-shadow(0 0 15px rgba(255, 255, 255, 1));
 }
 
 .cloud5 {
   background-image: url('/assets/cloud5.png');
   width: 710px;
   height: 255px;
+  opacity: 1;
+  filter: brightness(4) saturate(2) drop-shadow(0 0 15px rgba(255, 255, 255, 1));
 }

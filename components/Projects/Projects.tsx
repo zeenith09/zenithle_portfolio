@@ -4,11 +4,7 @@ import './projects.css'
 
 export function Projects() {
   return (
-    <Section
-      id="projects"
-      title="Public Projects"
-      className="projects-section-bg"
-    >
+    <Section id="projects" title="Public Projects">
       <div className="projects-container">
         <div className="projects-grid">
           {projects.map((project) => (

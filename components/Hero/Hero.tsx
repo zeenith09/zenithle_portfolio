@@ -11,8 +11,6 @@ export function Hero() {
     <>
       <IntroOverlay />
       <Section id="hero" className="hero-section">
-        <div className="hero-gradient-overlay" />
-
         <div className="hero-content">
           <h1 className="hero-title">WELCOME</h1>
           <p className="hero-subtitle">Scroll down to explore</p>

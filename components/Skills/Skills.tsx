@@ -23,7 +23,7 @@ export function Skills() {
   ]
 
   return (
-    <Section id="skills" title="Skills" className="skills-section-bg">
+    <Section id="skills" title="Skills">
       <div className="skills-container">
         <div className="skills-grid">
           {skillCategories.map((category) => (
