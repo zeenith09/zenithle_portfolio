@@ -70,6 +70,12 @@
   }
 }
 
+@media (max-width: 400px) {
+  .footer-bottom p {
+    font-size: 0.7rem;
+  }
+}
+
 .footer-bottom {
   grid-column: 1 / -1;
 }
