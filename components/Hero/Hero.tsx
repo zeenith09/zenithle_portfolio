@@ -1,5 +1,4 @@
 import { Section } from '@/components/Section/Section'
-import { IntroOverlay } from '@/components/IntroOverlay/IntroOverlay'
 import './hero.css'
 
 /**
@@ -8,18 +7,15 @@ import './hero.css'
  */
 export function Hero() {
   return (
-    <>
-      <IntroOverlay />
-      <Section id="hero" className="hero-section">
-        <div className="hero-content">
-          <h1 className="hero-title">WELCOME</h1>
-          <p className="hero-subtitle">Scroll down to explore</p>
+    <Section id="hero" className="hero-section">
+      <div className="hero-content">
+        <h1 className="hero-title">WELCOME</h1>
+        <p className="hero-subtitle">Scroll down to explore</p>
 
-          <div className="hero-scroll-indicator">
-            <p>↓</p>
-          </div>
+        <div className="hero-scroll-indicator">
+          <p>↓</p>
         </div>
-      </Section>
-    </>
+      </div>
+    </Section>
   )
 }

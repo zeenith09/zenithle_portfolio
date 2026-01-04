@@ -18,19 +18,20 @@ export function About() {
           using.
         </h3>
 
-        {/* <div className="about-focus">
+        <div className="about-focus">
           <ul className="about-focus-list">
             <li>
-              🔭 <strong>Currently working on</strong> Turning a Figma UI/UX
-              project into a fully functional, cross-device web application
+              🔭 <strong>Currently working on</strong>
+              Turning a Figma UI/UX project into a fully functional,
+              cross-device web application
             </li>
             <li>
-              🌱 <strong>Currently learning</strong> AWS and expanding my
-              back-end knowledge
+              🌱 <strong>Currently learning</strong>
+              AWS and expanding my back-end knowledge
             </li>
             <li>
-              👯 <strong>Looking for</strong> Volunteer or opportunities where
-              design + engineering overlap
+              👯 <strong>Looking for</strong>
+              Volunteer or opportunities where design + engineering overlap
             </li>
             <li>
               👨‍💻 <strong>Projects:</strong>{' '}
@@ -46,7 +47,7 @@ export function About() {
               📫 <strong>Reach me:</strong> zeenith.029@gmail.com
             </li>
           </ul>
-        </div> */}
+        </div>
       </div>
     </Section>
   )

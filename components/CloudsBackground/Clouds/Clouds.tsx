@@ -18,20 +18,20 @@ export function Clouds() {
     const cloudConfigs: CloudConfig[] = []
 
     // Create multiple cloud instances with randomized properties
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 20; i++) {
       // Use negative delay to start animation mid-cycle (cloud already on screen)
       const delay = -(Math.random() * 60)
       // Random duration between 60-120s for slower, more visible movement
       const duration = 60 + Math.random() * 60
-      // Distribute vertically with some randomness, but spaced out
-      const baseTop = 15 + i * 15
-      const top = baseTop + (Math.random() * 5 - 2.5) // ±2.5% variance
+      // Distribute vertically across full range (0-100%)
+      const baseTop = (i % 10) * 11
+      const top = baseTop + (Math.random() * 8 - 4) // ±4% variance
 
       cloudConfigs.push({
         id: i,
         delay,
         duration,
-        top: Math.max(5, Math.min(90, top)), // Keep between 5-90%
+        top: Math.max(0, Math.min(100, top)), // Keep between 0-100%
       })
     }
 
