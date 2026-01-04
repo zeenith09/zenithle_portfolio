@@ -1,0 +1,82 @@
+'use client'
+
+import { motion } from 'framer-motion'
+import { useInView, useReducedMotion } from 'framer-motion'
+import { useRef } from 'react'
+import { ANIMATION_CONFIG } from '@/lib/utils/constants'
+import './section.css'
+
+interface SectionProps {
+  id: string
+  title?: string
+  children: React.ReactNode
+  className?: string
+}
+
+export function Section({ id, title, children, className = '' }: SectionProps) {
+  const ref = useRef(null)
+  // T029: Tuned threshold to 0.25 for smooth entrance detection
+  // Triggers animation when 25% of section is visible
+  const isInView = useInView(ref, {
+    once: false,
+    amount: 0.1,
+    margin: '0px 0px -50px 0px', // Adjusted for better mobile detection
+  })
+  const prefersReducedMotion = useReducedMotion()
+
+  // T027: Fade-out effect for previous sections (visible → exit)
+  // T028: Fade-in with subtle upward movement for incoming sections (hidden → visible)
+  const variants = {
+    // Initial state: Section not yet visible
+    hidden: {
+      opacity: 0,
+      y: prefersReducedMotion ? 0 : 40, // Subtle 40px offset for entrance
+    },
+    // Section is in viewport
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: prefersReducedMotion
+          ? 0
+          : ANIMATION_CONFIG.transitionDuration,
+        ease: ANIMATION_CONFIG.easing,
+        // Stagger children for complex layouts
+        staggerChildren: 0.1,
+        delayChildren: 0.1,
+      },
+    },
+    // T027: Section scrolled past (fade effect)
+    exit: {
+      opacity: 0.4,
+      y: prefersReducedMotion ? 0 : -30,
+      transition: {
+        duration: prefersReducedMotion ? 0 : 0.4,
+        ease: ANIMATION_CONFIG.easing,
+      },
+    },
+  }
+
+  return (
+    <motion.section
+      ref={ref}
+      id={id}
+      className={`section-wrapper ${className}`}
+    >
+      <motion.div
+        className="section-content"
+        variants={id === 'hero' ? {} : variants}
+        initial="hidden"
+        animate={id === 'hero' ? 'visible' : isInView ? 'visible' : 'exit'}
+        viewport={{
+          once: false,
+          amount: 0.1,
+          margin: '0px 0px -50px 0px',
+        }}
+      >
+        {title && <h2 className="section-title font-pixel">{title}</h2>}
+        {children}
+      </motion.div>
+    </motion.section>
+  )
+}

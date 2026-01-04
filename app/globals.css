@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scrollbar-width: none;
+}
+
+/* Fix flashing issue upon re-loading */
+html[data-hide-content='true'] header,
+html[data-hide-content='true'] main,
+html[data-hide-content='true'] .clouds-background {
+  display: none;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+/* CSS Variables for theming */
+:root {
+  --font-pixel: 'Press Start 2P', monospace;
+  --color-bg: 255 255 255;
+  --color-text: 26 26 26;
+  --color-primary: 124 58 237;
+  --color-secondary: 37 99 235;
+  --color-accent: 219 39 119;
+}
+
+.dark {
+  --color-bg: 0 0 0;
+  --color-text: 224 224 224;
+  --color-primary: 147 51 234;
+  --color-secondary: 59 130 246;
+  --color-accent: 236 72 153;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base styles */
+body {
+  font-family: var(--font-pixel), monospace;
+  background-color: rgb(var(--color-bg));
+  color: rgb(var(--color-text));
+  line-height: 1.8;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Hide scrollbar (all browsers) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Skip to content link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: rgb(var(--color-primary));
+  color: white;
+  /* padding: 8px; */
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Focus visible styles for accessibility */
+:focus-visible {
+  outline: 2px solid rgb(var(--color-primary));
+  outline-offset: 2px;
+}
+
+/* Link styles */
+a:visited {
+  color: inherit;
+}
