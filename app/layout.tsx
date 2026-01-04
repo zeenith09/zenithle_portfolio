@@ -5,10 +5,12 @@ import { ThemeProvider } from '@/lib/hooks/useTheme'
 import { BackToTop } from '@/components/BackToTop/BackToTop'
 import { ParticlesBackground } from '@/components/ParticlesBackground/ParticlesBackground'
 import { CloudsBackground } from '@/components/CloudsBackground/CloudsBackground'
-import { IntroOverlay } from '@/components/IntroOverlay/IntroOverlay'
+import { IntroOverlayWrapper } from '@/components/IntroOverlay/IntroOverlayWrapper'
 
 const Header = dynamic(() =>
-  import('@/components/Header/Header').then((mod) => ({ default: mod.Header }))
+  import('@/components/Header/Header').then((mod) => ({
+    default: mod.Header,
+  }))
 )
 
 const pixelFont = Press_Start_2P({
@@ -44,7 +46,7 @@ export default function RootLayout({
       <body className={pixelFont.variable}>
         <ParticlesBackground />
         <CloudsBackground />
-        <IntroOverlay />
+        <IntroOverlayWrapper />
 
         <a href="#main-content" className="skip-link sr-only focus:not-sr-only">
           Skip to main content
