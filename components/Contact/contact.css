@@ -36,17 +36,36 @@
   font-size: 0.875rem;
   transition: all 0.3s ease;
   color: currentColor;
+  text-decoration: none;
+  display: inline-block;
 }
 
-.contact-button:hover {
+.contact-buttons a,
+.contact-buttons button {
+  padding: 0.75rem 2rem;
+  border: 2px solid currentColor;
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--font-pixel), monospace;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  color: currentColor;
+  text-decoration: none;
+}
+
+.contact-button:hover,
+.contact-buttons a:hover,
+.contact-buttons button:hover {
   background-color: var(--color-primary);
-  color: black;
+  color: rgb(140, 164, 218);
   border-color: var(--color-primary);
 }
 
-.dark .contact-button:hover {
+.dark .contact-button:hover,
+.dark .contact-buttons a:hover,
+.dark .contact-buttons button:hover {
   background-color: var(--color-primary);
-  color: rgb(175, 201, 255);
+  color: rgb(103, 71, 129);
   border-color: var(--color-primary);
 }
 

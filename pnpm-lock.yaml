@@ -26,6 +26,9 @@ importers:
       react-dom:
         specifier: ^19.2.3
         version: 19.2.3(react@19.2.3)
+      react-obfuscate:
+        specifier: ^3.7.0
+        version: 3.7.0(prop-types@15.8.1)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
     devDependencies:
       '@tailwindcss/postcss':
         specifier: ^4.1.18
@@ -1685,6 +1688,14 @@ packages:
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
+
+  react-obfuscate@3.7.0:
+    resolution: {integrity: sha512-y/sd0W8VuzoH6kGXjwdFCvCRxqBeffyaxrqyfWjACY8Ejl9sGaJbRf1iJXHYkQU4Va81G2triRkgHhsfNIx5FQ==}
+    engines: {node: '>= 0.10.0'}
+    peerDependencies:
+      prop-types: '>= 15'
+      react: '>= 16.8'
+      react-dom: '>= 16.8'
 
   react@19.2.3:
     resolution: {integrity: sha512-Ku/hhYbVjOQnXDZFv2+RibmLFGwFdeeKHFcOTlrt7xplBnya5OGn/hIRDsqDiSUcfORsDC7MPxwork8jBwsIWA==}
@@ -3694,6 +3705,12 @@ snapshots:
       scheduler: 0.27.0
 
   react-is@16.13.1: {}
+
+  react-obfuscate@3.7.0(prop-types@15.8.1)(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
+    dependencies:
+      prop-types: 15.8.1
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
 
   react@19.2.3: {}
 
