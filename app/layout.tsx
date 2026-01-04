@@ -39,6 +39,13 @@ export default function RootLayout({
                 const theme = localStorage.getItem('theme') || 'dark';
                 document.documentElement.className = theme;
               } catch (e) {}
+              
+              // Flashing issue when overlay > home
+              // Mark page to hide content until intro overlay is ready (only on home page with no hash)
+              if (window.location.pathname === '/' && !window.location.hash) {
+                document.documentElement.setAttribute('data-hide-content', 'true');
+                document.documentElement.style.backgroundColor = '#000000';
+              }
             `,
           }}
         />

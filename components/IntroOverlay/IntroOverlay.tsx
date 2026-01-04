@@ -20,6 +20,10 @@ export function IntroOverlay() {
     setIsClosing(true)
     setTimeout(() => {
       setVisible(false)
+      // Flashing issue, show the page content by removing the data attribute
+      document.documentElement.removeAttribute('data-hide-content')
+      document.documentElement.style.backgroundColor = ''
+
       const heroElement = document.getElementById('hero')
       heroElement?.scrollIntoView({ behavior: 'smooth' })
     }, 500) // Wait for fade-out animation to complete

@@ -21,6 +21,8 @@ export function ParticlesBackground() {
 
   return (
     <div
+      // global css
+      className="particles-background"
       style={{
         position: 'fixed',
         top: 0,

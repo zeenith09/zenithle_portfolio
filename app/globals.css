@@ -16,6 +16,13 @@ body {
   scrollbar-width: none;
 }
 
+/* Fix flashing issue upon re-loading */
+html[data-hide-content='true'] header,
+html[data-hide-content='true'] main,
+html[data-hide-content='true'] .clouds-background {
+  display: none;
+}
+
 main {
   position: relative;
   z-index: 1;

@@ -3,10 +3,6 @@
 import { useEffect, useState } from 'react'
 import './backToTop.css'
 
-/**
- * BackToTop component - Floating button to scroll to top
- * Shows only after scrolling down a bit for better UX
- */
 export function BackToTop() {
   const [isVisible, setIsVisible] = useState(false)
 
