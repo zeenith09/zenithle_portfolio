@@ -134,14 +134,25 @@
 
 .settings-option.active {
   background-color: var(--color-primary);
-  color: white;
   border-color: var(--color-primary);
+}
+
+.light .settings-option.active {
+  color: rgb(140, 164, 218);
+}
+
+.light .settings-option.active:hover {
+  background-color: rgba(124, 58, 237, 0.1);
+}
+
+.dark .settings-option.active {
+  color: rgb(103, 71, 129);
 }
 
 .settings-buttons {
   display: flex;
   gap: 1rem;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .settings-btn {
@@ -155,19 +166,10 @@
   color: currentColor;
 }
 
-.settings-cancel:hover {
+.settings-cancel:hover,
+.settings-save:hover {
   background-color: rgba(124, 58, 237, 0.1);
   border-color: var(--color-primary);
-}
-
-.settings-save {
-  background-color: var(--color-primary);
-  color: white;
-  border-color: var(--color-primary);
-}
-
-.settings-save:hover {
-  opacity: 0.9;
 }
 
 /* Mobile menu item */

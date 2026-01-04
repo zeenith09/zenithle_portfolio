@@ -36,12 +36,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               try {
-                const theme = localStorage.getItem('theme') || 'dark';
-                document.documentElement.className = theme;
+                document.documentElement.className = 'dark';
               } catch (e) {}
               
-              // Flashing issue when overlay > home
-              // Mark page to hide content until intro overlay is ready (only on home page with no hash)
+              // Hide content until intro overlay is ready (only on home page with no hash)
               if (window.location.pathname === '/' && !window.location.hash) {
                 document.documentElement.setAttribute('data-hide-content', 'true');
                 document.documentElement.style.backgroundColor = '#000000';

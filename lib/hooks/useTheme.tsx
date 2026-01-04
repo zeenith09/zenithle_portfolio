@@ -13,6 +13,7 @@ type Theme = 'dark' | 'light'
 interface ThemeContextValue {
   theme: Theme
   toggleTheme: () => void
+  setTheme: (newTheme: Theme) => void
   isDark: boolean
 }
 
@@ -24,18 +25,22 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     setMounted(true)
-    // Read from localStorage
-    const stored = localStorage.getItem('theme') as Theme | null
-    if (stored && (stored === 'dark' || stored === 'light')) {
-      setTheme(stored)
-      document.documentElement.className = stored
-    }
+    // Load the default theme (set by Settings)
+    const defaultTheme = (localStorage.getItem('defaultTheme') ||
+      'dark') as Theme
+    setTheme(defaultTheme)
+    document.documentElement.className = defaultTheme
   }, [])
 
   const toggleTheme = () => {
+    // Toggle only changes display, doesn't change the default
     const newTheme = theme === 'dark' ? 'light' : 'dark'
     setTheme(newTheme)
-    localStorage.setItem('theme', newTheme)
+    document.documentElement.className = newTheme
+  }
+
+  const updateTheme = (newTheme: Theme) => {
+    setTheme(newTheme)
     document.documentElement.className = newTheme
   }
 
@@ -49,6 +54,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
       value={{
         theme,
         toggleTheme,
+        setTheme: updateTheme,
         isDark: theme === 'dark',
       }}
     >

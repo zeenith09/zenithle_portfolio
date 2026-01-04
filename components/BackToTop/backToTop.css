@@ -19,6 +19,10 @@
   animation: fadeInUp 0.3s ease;
 }
 
+.dark .back-to-top {
+  background-color: rgb(var(--color-primary));
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
