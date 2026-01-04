@@ -1,0 +1,189 @@
+.settings-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: opacity 0.2s ease;
+  color: currentColor;
+}
+
+.settings-button:hover {
+  opacity: 0.7;
+}
+
+.settings-modal-wrapper {
+  display: none;
+}
+
+.settings-modal-wrapper.open {
+  display: block;
+}
+
+.settings-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9998;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.settings-modal {
+  background-color: var(--color-bg-secondary, rgb(255, 255, 255));
+  border: 2px solid currentColor;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  max-width: 450px;
+  position: relative;
+  animation: slideUp 0.3s ease-out;
+}
+
+.dark .settings-modal {
+  background-color: rgb(30, 30, 30);
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.settings-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: currentColor;
+  padding: 0;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+}
+
+.settings-modal-close:hover {
+  opacity: 0.7;
+}
+
+.settings-modal-title {
+  font-family: var(--font-pixel), monospace;
+  font-size: 1.25rem;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+  color: currentColor;
+}
+
+.settings-section {
+  margin-bottom: 2rem;
+}
+
+.settings-label {
+  display: block;
+  font-family: var(--font-pixel), monospace;
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+  color: currentColor;
+}
+
+.settings-options {
+  display: flex;
+  gap: 1rem;
+}
+
+.settings-option {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid currentColor;
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--font-pixel), monospace;
+  font-size: 0.75rem;
+  transition: all 0.3s ease;
+  color: currentColor;
+}
+
+.settings-option:hover {
+  background-color: rgba(124, 58, 237, 0.1);
+  border-color: var(--color-primary);
+}
+
+.settings-option.active {
+  background-color: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.settings-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.settings-btn {
+  padding: 0.5rem 1.5rem;
+  border: 2px solid currentColor;
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--font-pixel), monospace;
+  font-size: 0.75rem;
+  transition: all 0.3s ease;
+  color: currentColor;
+}
+
+.settings-cancel:hover {
+  background-color: rgba(124, 58, 237, 0.1);
+  border-color: var(--color-primary);
+}
+
+.settings-save {
+  background-color: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.settings-save:hover {
+  opacity: 0.9;
+}
+
+/* Mobile menu item */
+.settings-menu-item {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--font-pixel), monospace;
+  font-size: 0.75rem;
+  color: currentColor;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.settings-menu-item:hover {
+  background-color: rgba(124, 58, 237, 0.1);
+}

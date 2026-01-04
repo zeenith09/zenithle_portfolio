@@ -6,16 +6,9 @@ import { useIsMobile } from '@/lib/hooks/useIsMobile'
 import { Navigation } from '@/components/Navigation/Navigation'
 import { MobileMenu } from '@/components/MobileMenu/MobileMenu'
 import { ThemeToggle } from '@/components/ThemeToggle/ThemeToggle'
+import { Settings } from '@/components/Settings/Settings'
 import './header.css'
 
-/**
- * Header component - Fixed navigation bar with scroll detection
- * T032: Fixed positioning with smooth background transition
- * T033: Transparent-to-solid background based on scroll position
- * T034: Portfolio logo/title on left, always visible
- * T040: Show/hide tabs based on header background state
- * T050: ThemeToggle integrated into header navigation (desktop and mobile)
- */
 export function Header() {
   const { isScrolled } = useScrollPosition()
   const isMobile = useIsMobile()
@@ -66,6 +59,7 @@ export function Header() {
 
         <div className="header-actions">
           <ThemeToggle />
+          <Settings />
 
           {isMobile && (
             <div className="header-mobile-toggle">
