@@ -32,7 +32,7 @@ export function BackToTop() {
       aria-label="Back to top"
       type="button"
     >
-      ↑
+      ⬆
     </button>
   )
 }
