@@ -25,6 +25,13 @@
   flex-direction: column;
 }
 
+@media (max-width: 500px) {
+  .project-card {
+    width: 345px;
+    margin: 0 auto;
+  }
+}
+
 .project-card:hover {
   box-shadow: 0 10px 15px -3px rgba(124, 58, 237, 0.01);
 }

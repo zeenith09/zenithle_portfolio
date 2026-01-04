@@ -9,7 +9,7 @@ export function Contact() {
     <Section id="contact" title="Get In Touch">
       <div className="contact-container">
         <p className="contact-message">
-          Have a question or want to work together?
+          Have a question or would love to work together?
         </p>
 
         <div className="contact-buttons">
@@ -38,7 +38,7 @@ export function Contact() {
           </a>
         </div>
 
-        <p className="contact-footer">I typically respond within 24 hours</p>
+        <p className="contact-footer">I look forward to connecting with you!</p>
       </div>
     </Section>
   )

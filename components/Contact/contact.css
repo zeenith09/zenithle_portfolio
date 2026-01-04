@@ -40,6 +40,14 @@
   display: inline-block;
 }
 
+@media (max-width: 500px) {
+  .contact-button,
+  a {
+    width: 180px;
+    margin: 0 auto;
+  }
+}
+
 .contact-buttons a,
 .contact-buttons button {
   padding: 0.75rem 2rem;
