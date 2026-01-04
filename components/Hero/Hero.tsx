@@ -10,7 +10,7 @@ export function Hero() {
     <Section id="hero" className="hero-section">
       <div className="hero-content">
         <h1 className="hero-title">WELCOME</h1>
-        <p className="hero-subtitle">Scroll down to explore</p>
+        <p className="hero-subtitle">Player One: Portfolio Mode</p>
 
         <div className="hero-scroll-indicator">
           <p>↓</p>

@@ -37,7 +37,7 @@ export function IntroOverlay() {
       onClick={handleClick}
     >
       <div className="typewriter-container">
-        <p className="typewriter">Click anywhere to begin</p>
+        <p className="typewriter">Press Start 🕹️</p>
       </div>
 
       <div className="galaxy-container">
