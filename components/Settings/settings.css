@@ -1,7 +1,7 @@
 .settings-button {
   background: none;
   border: none;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   cursor: pointer;
   padding: 0.5rem;
   transition: opacity 0.2s ease;
@@ -49,6 +49,7 @@
   border-radius: 0.5rem;
   padding: 2rem;
   max-width: 450px;
+  min-width: 330px;
   position: relative;
   animation: slideUp 0.3s ease-out;
 }
@@ -100,6 +101,7 @@
 
 .settings-section {
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .settings-label {
@@ -113,6 +115,7 @@
 .settings-options {
   display: flex;
   gap: 1rem;
+  justify-content: center;
 }
 
 .settings-option {
@@ -125,6 +128,11 @@
   font-size: 0.75rem;
   transition: all 0.3s ease;
   color: currentColor;
+  /* THIS */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
 }
 
 .settings-option:hover {
