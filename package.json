@@ -13,7 +13,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.11.0",
   "dependencies": {
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.26",
