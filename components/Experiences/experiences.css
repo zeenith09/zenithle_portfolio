@@ -10,9 +10,23 @@
   gap: 2rem;
 }
 
+/* For most tablets */
+@media (max-width: 950px) {
+  .experiences-list {
+    padding: 0 2rem;
+  }
+}
+
+/* For most phones including the small ones */
+@media (max-width: 450px) {
+  .experiences-list {
+    padding: 0 1rem;
+  }
+}
+
 .experience-item {
   border-left: 4px solid var(--color-primary);
-  padding-left: 1.5rem;
+  padding-left: 0.5rem;
   position: relative;
 }
 

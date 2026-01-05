@@ -23,7 +23,7 @@ export function Footer() {
 
           <div className="footer-section">
             <h4>Professional</h4>
-            <a href="#experiences">Experiences</a>
+            <a href="#experiences">Experience</a>
             <a href="#contact">Contact</a>
             <a
               href="https://drive.google.com/file/d/1pe72Z-qHNdCmgSQ-drvlpHKMX7KWjWrh/view?usp=sharing"
