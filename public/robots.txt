@@ -1,0 +1,26 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Specifically allow social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Disallow crawling of certain paths (optional)
+Disallow: /.next/
+Disallow: /api/
