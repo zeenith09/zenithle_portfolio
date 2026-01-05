@@ -16,7 +16,7 @@ jobs:
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd projects/zenithle_portfolio
+            cd /home/ubuntu/zenithle_portfolio
             git reset --hard origin/main
             git pull origin main
             npm install
