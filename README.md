@@ -15,6 +15,9 @@ Visit the site: http://zenithle.tech/
 - **🎓 Skills Section** - Categorized display of technical and soft skills
 - **🌌 Visual Effects** - Particle background and cloud animations for enhanced aesthetics
 - **♿ Accessible** - Built with accessibility best practices in mind
+- **🧪 Comprehensive Testing** - Unit tests (Jest) and E2E tests (Playwright) for reliability
+- **📊 Social Media Previews** - OpenGraph meta tags for rich share cards on social platforms
+- **🤖 SEO & Crawlers** - Optimized with robots.txt for search engines and social bots
 
 ## 🛠️ Tech Stack
 
@@ -30,14 +33,13 @@ Visit the site: http://zenithle.tech/
 ## 📁 Project Structure
 
 ```
-portfolio_Draft/
+zenithle_portfolio/
 ├── app/                    # Next.js app directory
 │   ├── globals.css        # Global styles and CSS variables
-│   ├── layout.tsx         # Root layout component
+│   ├── layout.tsx         # Root layout component with meta tags
 │   ├── page.tsx           # Home page
 │   ├── not-found.tsx      # 404 page
 │   ├── not-found.css      # 404 styles
-│   ├── opengraph-image.png # OG image for social media previews
 │   └── api/               # API routes
 │       └── counter/       # Counter endpoint
 │
@@ -77,14 +79,27 @@ portfolio_Draft/
 │       └── scrollTo.ts    # Smooth scroll utility
 │
 ├── public/                # Static assets
-│   └── assets/            # Images and media files
+│   ├── assets/            # Images and media files
+│   ├── opengraph-image.png # OG image for social media previews
+│   └── robots.txt         # SEO and crawler configuration
 │
 ├── tests/                 # Test files
-│   ├── components/        # Component tests
-│   └── e2e/              # End-to-end tests
+│   ├── components/        # Jest unit tests for components
+│   │   ├── Galaxy.test.tsx
+│   │   ├── Settings.test.tsx
+│   │   ├── ThemeToggle.test.tsx
+│   │   ├── CloudsBackground.test.tsx
+│   │   ├── BackToTop.test.tsx
+│   │   ├── ParticlesBackground.test.tsx
+│   │   └── IntroOverlay.test.tsx
+│   └── e2e/               # Playwright E2E tests
+│       └── navigation.test.ts
 │
 ├── package.json          # Dependencies and scripts
 ├── tsconfig.json         # TypeScript configuration
+├── jest.config.js        # Jest testing configuration
+├── jest.setup.js         # Jest setup file
+├── playwright.config.ts  # Playwright E2E testing configuration
 ├── tailwind.config.js    # Tailwind CSS configuration
 ├── next.config.js        # Next.js configuration
 ├── postcss.config.js     # PostCSS configuration
@@ -113,13 +128,6 @@ Navigation links smoothly scroll to sections with visual feedback.
 - Fade-in transitions
 - Hover effects on interactive elements
 
-## 📱 Browser Support
-
-- Chrome/Edge 90+
-- Firefox 88+
-- Safari 14+
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
 ## 🔗 Key Components
 
 | Component       | Purpose                         |
@@ -132,6 +140,53 @@ Navigation links smoothly scroll to sections with visual feedback.
 | **Experiences** | Career timeline                 |
 | **Contact**     | Get in touch section            |
 | **Footer**      | Social links and info           |
+
+## 🧪 Testing
+
+### Unit Tests (Jest)
+
+Comprehensive component tests covering:
+
+- Galaxy visual effects
+- Settings and theme functionality
+- Theme toggle component
+- Cloud background animations
+- Back-to-top button
+- Particle effects
+- Intro overlay interactions
+
+Run tests: `npm run test`
+
+### E2E Tests (Playwright)
+
+End-to-end tests for:
+
+- Navigation between sections
+- Smooth scrolling behavior
+- Theme switching (light/dark)
+- Mobile responsiveness
+- Cross-browser support (Chromium, Firefox, Mobile Chrome)
+
+Run tests: run `npm run dev` and `npm run e2e` at the same time
+
+## 📊 Social Media & SEO
+
+### OpenGraph Meta Tags
+
+Configured in [app/layout.tsx](app/layout.tsx) with:
+
+- Title and description
+- Social preview image ([public/opengraph-image.png](public/opengraph-image.png))
+- Canonical URL
+- Twitter Card support
+
+### Robots.txt
+
+[public/robots.txt](public/robots.txt) configured for:
+
+- Search engine crawlers (Google, Bing)
+- Social media bots (Facebook, Twitter, LinkedIn)
+- Sitemap references
 
 ## 📞 Contact & Social
 
