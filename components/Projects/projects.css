@@ -16,6 +16,12 @@
   }
 }
 
+@media (min-width: 500px) and (max-width: 950px) {
+  .projects-grid {
+    gap: 1rem;
+  }
+}
+
 .project-card {
   border: 2px solid currentColor;
   padding: 1.5rem;
