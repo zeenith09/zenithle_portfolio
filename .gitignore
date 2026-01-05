@@ -17,6 +17,8 @@ Thumbs.db
 # Node / build
 node_modules/
 .next/
+playwright-report/
+test-results/
 
 # Debug logs
 npm-debug.log*
