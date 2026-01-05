@@ -2,6 +2,8 @@
 
 For the longest time, I've always wanted to create a modern and visually catchy portfolio to showcase my journey while having fun with it. Here it is, finally coming to life - a 2000s retro game vibe website with smooth animations and dark/light theme support. More features are yet to come!
 
+Visit the site: http://zenithle.tech/
+
 ## ✨ Features
 
 - **🎨 Dark/Light Theme Toggle** - Seamlessly switch between dark and light modes for comfortable viewing
