@@ -1,11 +1,12 @@
 import { Press_Start_2P } from 'next/font/google'
 import dynamic from 'next/dynamic'
-import './globals.css'
 import { ThemeProvider } from '@/lib/hooks/useTheme'
 import { BackToTop } from '@/components/BackToTop/BackToTop'
 import { ParticlesBackground } from '@/components/ParticlesBackground/ParticlesBackground'
 import { CloudsBackground } from '@/components/CloudsBackground/CloudsBackground'
 import { IntroOverlayWrapper } from '@/components/IntroOverlay/IntroOverlayWrapper'
+
+import './globals.css'
 
 const Header = dynamic(() =>
   import('@/components/Header/Header').then((mod) => ({
