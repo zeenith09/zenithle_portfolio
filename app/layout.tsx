@@ -26,12 +26,6 @@ export const metadata = {
   icons: {
     icon: 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👾</text></svg>',
   },
-  openGraph: {
-    title: 'Player Zenith: Portfolio',
-    description: 'Retro 2000s space-themed portfolio website',
-    url: 'https://zenithle.tech/',
-    image: '/assets/zle_cmr.png',
-  },
 }
 
 export default function RootLayout({
