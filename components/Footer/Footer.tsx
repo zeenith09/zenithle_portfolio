@@ -1,6 +1,5 @@
 'use client'
 
-import useVisitCount from '@/lib/hooks/useVisitCount'
 import { FaGithub, FaLinkedin, FaHandshake } from 'react-icons/fa'
 import './footer.css'
 
@@ -11,8 +10,6 @@ export function Footer() {
   let yyyy = today.getFullYear()
 
   let lastUpdated = mm + '/' + dd + '/' + yyyy
-
-  const count = useVisitCount(300) // 300ms debounce
 
   return (
     <footer className="footer-container">
@@ -81,9 +78,7 @@ export function Footer() {
             © {yyyy} - {yyyy + 1}
           </p>
           <p>The internet is vast, yet you are here. Thanks for stopping by!</p>
-          <p>
-            {lastUpdated} | Visits: {count}
-          </p>
+          <p>Today's Date: {lastUpdated}</p>
         </div>
       </div>
     </footer>
