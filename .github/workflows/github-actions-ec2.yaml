@@ -19,6 +19,14 @@ jobs:
             cd /home/ubuntu/zenithle_portfolio
             git reset --hard origin/main
             git pull origin main
-            npm install
+
+            # Only install deps if node_modules is missing (speeds up deploys)
+            if [ ! -d "node_modules" ]; then
+              npm install
+            fi
+
+            # Clean old build artifacts just to be safe
+            rm -rf .next
             npm run build
+
             pm2 restart portfolio
