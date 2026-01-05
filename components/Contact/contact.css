@@ -40,9 +40,17 @@
   display: inline-block;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 400px) {
   .contact-button,
-  a {
+  .contact-buttons a {
+    width: 203px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-button,
+  .contact-buttons a {
     width: 180px;
     margin: 0 auto;
   }

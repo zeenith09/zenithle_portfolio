@@ -1,7 +1,6 @@
 'use client'
 
 import { Section } from '@/components/Section/Section'
-import { useIsMobile } from '@/lib/hooks/useIsMobile'
 import { languages, tools, growing } from '@/lib/data/skills'
 import './skills.css'
 
