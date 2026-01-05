@@ -12,7 +12,7 @@
 
 .experience-item {
   border-left: 4px solid var(--color-primary);
-  padding-left: 1.5rem;
+  padding-left: 0.5rem;
   position: relative;
 }
 

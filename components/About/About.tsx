@@ -33,19 +33,6 @@ export function About() {
               👯 <strong>Looking for</strong>
               Volunteer or opportunities where design + engineering overlap
             </li>
-            <li>
-              👨‍💻 <strong>Projects:</strong>{' '}
-              <a
-                href="https://linktr.ee/zenithle"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                linktr.ee/zenithle
-              </a>
-            </li>
-            <li>
-              📫 <strong>Reach me:</strong> zeenith.029@gmail.com
-            </li>
           </ul>
         </div>
       </div>

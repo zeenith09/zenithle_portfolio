@@ -6,7 +6,6 @@ import { languages, tools, growing } from '@/lib/data/skills'
 import './skills.css'
 
 export function Skills() {
-  const isMobile = useIsMobile()
   const skillCategories = [
     {
       name: 'Languages',

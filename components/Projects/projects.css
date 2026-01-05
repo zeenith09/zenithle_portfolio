@@ -25,9 +25,18 @@
   flex-direction: column;
 }
 
+/* For most phones */
 @media (max-width: 500px) {
   .project-card {
-    width: 345px;
+    width: 370px;
+    margin: 0 auto;
+  }
+}
+
+/* For extra small phones */
+@media (max-width: 500px) {
+  .project-card {
+    width: 325px;
     margin: 0 auto;
   }
 }
