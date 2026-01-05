@@ -51,6 +51,18 @@ export default function RootLayout({
             `,
           }}
         />
+
+        {/* Fallback in case the other one fails for social link */}
+        <meta property="og:title" content="Player Zenith: Portfolio" />
+        <meta
+          property="og:description"
+          content="Retro 2000s space-themed portfolio website"
+        />
+        <meta property="og:image" content="/opengraph-image.png" />
+        <meta property="og:url" content="https://www.zenithle.tech" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="/opengraph-image.png" />
       </head>
       <body className={pixelFont.variable}>
         <ParticlesBackground />
