@@ -24,7 +24,8 @@ Visit the site: http://zenithle.tech/
 - **Icons**: [React Icons](https://react-icons.github.io/react-icons/) (Font Awesome, Feather, etc.)
 - **Animations**: CSS animations and transitions
 - **Language**: [TypeScript](https://www.typescriptlang.org/) for type safety
-- **Package Manager**: [pnpm](https://pnpm.io/)
+- **Package Manager**: [pnpm](https://pnpm.io/) for early stages, now switched to [npm](https://www.npmjs.com/)
+- **CI-CD Pipeline for Deployment**: [AWS EC2](https://aws.amazon.com/ec2/) for early deployment stages, now switched to [AWS S3](https://aws.amazon.com/pm/serv-s3/?trk=a1eab8e1-44df-4b59-97a0-7f429e638b4b&sc_channel=ps&trk=a1eab8e1-44df-4b59-97a0-7f429e638b4b&sc_channel=ps&ef_id=CjwKCAiA3-3KBhBiEiwA2x7FdGL8TvhB1U5mugkKKWaIULbS_aq6AZtR2vBTWjqC0sNSoG2Mze_hdRoCic8QAvD_BwE:G:s&s_kwcid=AL!4422!3!651751060962!e!!g!!aws%20s3&gad_campaignid=19852662362&gbraid=0AAAAADjHtp9ocLtQxUmW3fdxrnCjYAdlZ&gclid=CjwKCAiA3-3KBhBiEiwA2x7FdGL8TvhB1U5mugkKKWaIULbS_aq6AZtR2vBTWjqC0sNSoG2Mze_hdRoCic8QAvD_BwE)
 
 ## 📁 Project Structure
 
@@ -35,7 +36,10 @@ portfolio_Draft/
 │   ├── layout.tsx         # Root layout component
 │   ├── page.tsx           # Home page
 │   ├── not-found.tsx      # 404 page
-│   └── not-found.css      # 404 styles
+│   ├── not-found.css      # 404 styles
+│   ├── opengraph-image.png # OG image for social media previews
+│   └── api/               # API routes
+│       └── counter/       # Counter endpoint
 │
 ├── components/            # Reusable React components
 │   ├── Header/            # Navigation header
@@ -60,12 +64,14 @@ portfolio_Draft/
 ├── lib/                   # Utility functions and hooks
 │   ├── data/              # Static data (projects, skills)
 │   │   ├── projects.ts   # Project data
-│   │   └── skills.ts     # Skills data
+│   │   ├── skills.ts     # Skills data
+│   │   └── visit-count.json # Visit counter data
 │   ├── hooks/             # Custom React hooks
 │   │   ├── useTheme.tsx  # Theme management
 │   │   ├── useIsMobile.ts # Mobile detection
 │   │   ├── useScrollPosition.ts # Scroll tracking
-│   │   └── useReducedMotion.ts # Motion preferences
+│   │   ├── useReducedMotion.ts # Motion preferences
+│   │   └── useVisitCount.ts # Visit counter hook
 │   └── utils/             # Helper utilities
 │       ├── constants.ts   # App constants
 │       └── scrollTo.ts    # Smooth scroll utility
