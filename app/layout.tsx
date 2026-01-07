@@ -39,15 +39,20 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              try {
-                document.documentElement.className = 'dark';
-              } catch (e) {}
-              
-              // Hide content until intro overlay is ready (only on home page with no hash)
-              if (window.location.pathname === '/' && !window.location.hash) {
-                document.documentElement.setAttribute('data-hide-content', 'true');
-                document.documentElement.style.backgroundColor = '#000000';
-              }
+              (function() {
+                // Load theme preference BEFORE first paint to prevent flash
+                const theme = localStorage.getItem('defaultTheme') || 'dark';
+                document.documentElement.className = theme;
+                
+                // Set background to match theme immediately
+                const bgColor = theme === 'dark' ? '#000000' : '#ffffff';
+                document.documentElement.style.backgroundColor = bgColor;
+                
+                // Hide content until intro overlay is ready (only on home page with no hash)
+                if (window.location.pathname === '/' && !window.location.hash) {
+                  document.documentElement.setAttribute('data-hide-content', 'true');
+                }
+              })();
             `,
           }}
         />

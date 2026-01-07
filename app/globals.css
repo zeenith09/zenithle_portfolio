@@ -23,6 +23,22 @@ html[data-hide-content='true'] .clouds-background {
   display: none;
 }
 
+/* Bridge visibility transition with fade-in animation */
+html.reveal-content header,
+html.reveal-content main,
+html.reveal-content .clouds-background {
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 main {
   position: relative;
   z-index: 1;
