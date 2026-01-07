@@ -3,6 +3,7 @@
 .github/.agents/
 .github/agent/
 .github/copilot/
+.github/prompts/
 .specify/
 .specs/
 

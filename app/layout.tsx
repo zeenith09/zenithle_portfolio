@@ -2,8 +2,7 @@ import { Press_Start_2P } from 'next/font/google'
 import dynamic from 'next/dynamic'
 import { ThemeProvider } from '@/lib/hooks/useTheme'
 import { BackToTop } from '@/components/BackToTop/BackToTop'
-import { ParticlesBackground } from '@/components/ParticlesBackground/ParticlesBackground'
-import { CloudsBackground } from '@/components/CloudsBackground/CloudsBackground'
+import { ThemeSyncedBackground } from '@/components/ThemeSyncedBackground/ThemeSyncedBackground'
 import { IntroOverlayWrapper } from '@/components/IntroOverlay/IntroOverlayWrapper'
 
 import './globals.css'
@@ -34,20 +33,27 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              try {
-                document.documentElement.className = 'dark';
-              } catch (e) {}
-              
-              // Hide content until intro overlay is ready (only on home page with no hash)
-              if (window.location.pathname === '/' && !window.location.hash) {
-                document.documentElement.setAttribute('data-hide-content', 'true');
-                document.documentElement.style.backgroundColor = '#000000';
-              }
+              (function() {
+                // Load theme preference BEFORE first paint to prevent flash
+                const theme = localStorage.getItem('defaultTheme') || 'dark';
+                document.documentElement.className = theme;
+                
+                // Set initial dark background for intro overlay
+                // CSS gradients will handle light mode background
+                if (theme === 'dark') {
+                  document.documentElement.style.backgroundColor = '#000000';
+                }
+                
+                // Hide content until intro overlay is ready (only on home page with no hash)
+                if (window.location.pathname === '/' && !window.location.hash) {
+                  document.documentElement.setAttribute('data-hide-content', 'true');
+                }
+              })();
             `,
           }}
         />
@@ -65,8 +71,7 @@ export default function RootLayout({
         <meta name="twitter:image" content="/opengraph-image.png" />
       </head>
       <body className={pixelFont.variable}>
-        <ParticlesBackground />
-        <CloudsBackground />
+        <ThemeSyncedBackground />
         <IntroOverlayWrapper />
 
         <a href="#main-content" className="skip-link sr-only focus:not-sr-only">

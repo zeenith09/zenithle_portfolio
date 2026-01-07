@@ -29,7 +29,11 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     const defaultTheme = (localStorage.getItem('defaultTheme') ||
       'dark') as Theme
     setTheme(defaultTheme)
-    document.documentElement.className = defaultTheme
+
+    // Only update DOM if it's different from what's already applied
+    if (document.documentElement.className !== defaultTheme) {
+      document.documentElement.className = defaultTheme
+    }
   }, [])
 
   const toggleTheme = () => {

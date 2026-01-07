@@ -20,8 +20,11 @@ export function IntroOverlay() {
     setIsClosing(true)
     setTimeout(() => {
       setVisible(false)
-      // Flashing issue, show the page content by removing the data attribute
+      // Add fade-in animation to bridge the visibility transition
+      document.documentElement.classList.add('reveal-content')
+      // Show the page content by removing the data attribute
       document.documentElement.removeAttribute('data-hide-content')
+      // Clear inline background style to let CSS gradients show
       document.documentElement.style.backgroundColor = ''
 
       const heroElement = document.getElementById('hero')

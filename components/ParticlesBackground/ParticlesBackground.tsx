@@ -1,27 +1,10 @@
 'use client'
 
-import { useEffect, useState } from 'react'
 import Particles from '@/components/ParticlesBackground/Particles/Particles'
 
 export function ParticlesBackground() {
-  const [isDarkMode, setIsDarkMode] = useState(false)
-
-  useEffect(() => {
-    // Check initial dark mode state
-    setIsDarkMode(document.documentElement.classList.contains('dark'))
-
-    // Listen for theme changes
-    const observer = new MutationObserver(() => {
-      setIsDarkMode(document.documentElement.classList.contains('dark'))
-    })
-
-    observer.observe(document.documentElement, { attributes: true })
-    return () => observer.disconnect()
-  }, [])
-
   return (
     <div
-      // global css
       className="particles-background"
       style={{
         position: 'fixed',
@@ -31,8 +14,6 @@ export function ParticlesBackground() {
         height: '100%',
         zIndex: 0,
         pointerEvents: 'none',
-        opacity: isDarkMode ? 1 : 0,
-        transition: 'opacity 0.3s ease-in-out',
       }}
     >
       <Particles
