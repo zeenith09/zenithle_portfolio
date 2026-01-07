@@ -24,10 +24,8 @@ export function IntroOverlay() {
       document.documentElement.classList.add('reveal-content')
       // Show the page content by removing the data attribute
       document.documentElement.removeAttribute('data-hide-content')
-      // Set background to match current theme
-      const theme = localStorage.getItem('defaultTheme') || 'dark'
-      const bgColor = theme === 'dark' ? '#000000' : '#ffffff'
-      document.documentElement.style.backgroundColor = bgColor
+      // Clear inline background style to let CSS gradients show
+      document.documentElement.style.backgroundColor = ''
 
       const heroElement = document.getElementById('hero')
       heroElement?.scrollIntoView({ behavior: 'smooth' })
