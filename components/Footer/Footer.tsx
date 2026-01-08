@@ -28,7 +28,7 @@ export function Footer() {
             <a href="#experiences">Experience</a>
             <a href="#contact">Contact</a>
             <a
-              href="https://drive.google.com/file/d/1pe72Z-qHNdCmgSQ-drvlpHKMX7KWjWrh/view?usp=sharing"
+              href="https://drive.google.com/file/d/13rwNdSq4XfhEU8Qn18UUDsgFpNCuYI8n/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >
