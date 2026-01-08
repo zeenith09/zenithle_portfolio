@@ -16,6 +16,7 @@
   z-index: -1;
   overflow: hidden;
   pointer-events: none;
+  /* Original gradient for desktop */
   background: linear-gradient(
     to bottom,
     rgba(236, 72, 153, 0.07) 0%,
@@ -30,45 +31,59 @@
   background-size: 100% 100%;
   background-image: url('/assets/cloud1.png');
   opacity: 1;
+  /* Original filter for desktop - nice glowy clouds */
   filter: brightness(4) saturate(2) drop-shadow(0 0 15px rgba(255, 255, 255, 1));
+}
+
+/* iOS HDR fix - only applies on iOS devices */
+@supports (-webkit-touch-callout: none) {
+  .clouds-container {
+    /* Flattened gradient for iOS - less contrast = no HDR kick-in */
+    background: linear-gradient(
+      to bottom,
+      rgba(250, 245, 255, 1) 0%,
+      rgba(245, 240, 255, 1) 50%,
+      rgba(240, 245, 255, 1) 100%
+    ) !important;
+  }
+
+  .cloud {
+    opacity: 0.9 !important;
+    /* Reduced filter for iOS - no HDR triggers */
+    filter: brightness(1.5) saturate(1.2)
+      drop-shadow(0 0 6px rgba(255, 255, 255, 0.5)) !important;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
 }
 
 .cloud1 {
   background-image: url('/assets/cloud1.png');
   width: 700px;
   height: 250px;
-  opacity: 1;
-  filter: brightness(4) saturate(2) drop-shadow(0 0 15px rgba(255, 255, 255, 1));
 }
 
 .cloud2 {
   background-image: url('/assets/cloud2.png');
   width: 680px;
   height: 240px;
-  opacity: 1;
-  filter: brightness(4) saturate(2) drop-shadow(0 0 15px rgba(255, 255, 255, 1));
 }
 
 .cloud3 {
   background-image: url('/assets/cloud3.png');
   width: 720px;
   height: 260px;
-  opacity: 1;
-  filter: brightness(4) saturate(2) drop-shadow(0 0 15px rgba(255, 255, 255, 1));
 }
 
 .cloud4 {
   background-image: url('/assets/cloud4.png');
   width: 690px;
   height: 245px;
-  opacity: 1;
-  filter: brightness(4) saturate(2) drop-shadow(0 0 15px rgba(255, 255, 255, 1));
 }
 
 .cloud5 {
   background-image: url('/assets/cloud5.png');
   width: 710px;
   height: 255px;
-  opacity: 1;
-  filter: brightness(4) saturate(2) drop-shadow(0 0 15px rgba(255, 255, 255, 1));
 }

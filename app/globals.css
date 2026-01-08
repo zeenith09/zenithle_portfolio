@@ -65,6 +65,9 @@ main {
 /* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
+  /* Force sRGB to prevent iOS HDR issues */
+  color-scheme: light dark;
+  -webkit-color-profile: sRGB;
 }
 
 /* Base styles */

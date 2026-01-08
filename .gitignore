@@ -18,6 +18,7 @@ Thumbs.db
 # Node / build
 node_modules/
 .next/
+out/
 playwright-report/
 test-results/
 
