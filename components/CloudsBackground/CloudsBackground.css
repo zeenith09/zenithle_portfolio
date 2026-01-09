@@ -10,15 +10,11 @@
 @supports (-webkit-touch-callout: none) {
   .clouds-background {
     mix-blend-mode: normal !important;
-    will-change: auto !important;
     opacity: 1 !important;
   }
 
   /* Force cloud PNG images out of HDR */
   .clouds-background .cloud {
-    transform: translateZ(0) !important;
-    backface-visibility: hidden !important;
-    -webkit-backface-visibility: hidden !important;
     opacity: 1 !important;
     mix-blend-mode: normal !important;
   }
