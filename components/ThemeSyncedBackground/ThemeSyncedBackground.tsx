@@ -14,8 +14,9 @@ export function ThemeSyncedBackground() {
   // Check both the current className and localStorage as backup
   const getInitialTheme = () => {
     const htmlClass = document.documentElement.className
-    if (htmlClass === 'light') return false // false = light mode
-    if (htmlClass === 'dark') return true // true = dark mode
+    // Check if class contains 'light' or 'dark' (may have other classes like 'reveal-content')
+    if (htmlClass.includes('light')) return false // false = light mode
+    if (htmlClass.includes('dark')) return true // true = dark mode
     // Fallback to localStorage
     const theme =
       typeof window !== 'undefined'

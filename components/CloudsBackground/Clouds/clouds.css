@@ -38,23 +38,14 @@
 /* iOS HDR fix - only applies on iOS devices */
 @supports (-webkit-touch-callout: none) {
   .clouds-container {
-    /* Flattened gradient for iOS - less contrast = no HDR kick-in */
-    background: linear-gradient(
-      to bottom,
-      rgba(250, 245, 255, 1) 0%,
-      rgba(245, 240, 255, 1) 50%,
-      rgba(240, 245, 255, 1) 100%
-    ) !important;
+    mix-blend-mode: normal !important;
+    will-change: auto !important;
+    opacity: 1 !important;
   }
 
   .cloud {
-    opacity: 0.9 !important;
-    /* Reduced filter for iOS - no HDR triggers */
-    filter: brightness(1.5) saturate(1.2)
-      drop-shadow(0 0 6px rgba(255, 255, 255, 0.5)) !important;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
+    /* Hide all cloud images */
+    display: none !important;
   }
 }
 
