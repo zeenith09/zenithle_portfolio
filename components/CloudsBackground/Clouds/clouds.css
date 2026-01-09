@@ -45,14 +45,6 @@
       rgba(124, 58, 237, 0.07) 50%,
       rgba(200, 220, 255, 0.7) 100%
     ) !important;
-    mix-blend-mode: normal !important;
-    opacity: 1 !important;
-  }
-
-  .cloud {
-    /* Reduce brightness on iOS to prevent HDR issues */
-    filter: brightness(1.8) saturate(1.1)
-      drop-shadow(0 0 8px rgba(255, 255, 255, 0.7)) !important;
   }
 }
 
