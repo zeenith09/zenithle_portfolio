@@ -42,11 +42,6 @@
     will-change: auto !important;
     opacity: 1 !important;
   }
-
-  .cloud {
-    /* Hide all cloud images */
-    display: none !important;
-  }
 }
 
 .cloud1 {
