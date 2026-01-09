@@ -19,3 +19,11 @@
     mix-blend-mode: normal !important;
   }
 }
+
+/* Temporary: Test iOS styles on desktop - DELETE AFTER TESTING */
+body.test-ios-styles .clouds-background {
+  color-profile: sRGB;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+  will-change: auto !important;
+}

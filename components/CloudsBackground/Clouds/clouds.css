@@ -48,6 +48,12 @@
     mix-blend-mode: normal !important;
     opacity: 1 !important;
   }
+
+  .cloud {
+    /* Reduce brightness on iOS to prevent HDR issues */
+    filter: brightness(1.8) saturate(1.1)
+      drop-shadow(0 0 8px rgba(255, 255, 255, 0.7)) !important;
+  }
 }
 
 .cloud1 {
