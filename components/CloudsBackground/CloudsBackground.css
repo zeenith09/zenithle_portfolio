@@ -6,16 +6,13 @@
   height: 100%;
 }
 
-/* iOS HDR fix - kill all HDR triggers on the wrapper */
+/* iOS HDR fix - minimal overrides */
 @supports (-webkit-touch-callout: none) {
   .clouds-background {
-    mix-blend-mode: normal !important;
-    opacity: 1 !important;
+    mix-blend-mode: normal;
   }
 
-  /* Force cloud PNG images out of HDR */
   .clouds-background .cloud {
-    opacity: 1 !important;
-    mix-blend-mode: normal !important;
+    mix-blend-mode: normal;
   }
 }
