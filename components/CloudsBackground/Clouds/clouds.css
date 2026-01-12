@@ -31,8 +31,6 @@
   background-size: 100% 100%;
   background-image: url('/assets/cloud1.jpeg');
   opacity: 1;
-  /* Original filter for desktop - nice glowy clouds */
-  filter: brightness(4) saturate(2) drop-shadow(0 0 15px rgba(255, 255, 255, 1));
 }
 
 /* iOS HDR fix - only applies on iOS devices */
