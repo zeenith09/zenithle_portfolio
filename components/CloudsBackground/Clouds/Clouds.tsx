@@ -24,8 +24,11 @@ export function Clouds() {
       // Random duration between 60-120s for slower, more visible movement
       const duration = 60 + Math.random() * 60
       // Distribute vertically across full range (0-100%)
-      const baseTop = (i % 10) * 11
-      const top = baseTop + (Math.random() * 8 - 4) // ±4% variance
+      // const baseTop = (i % 10) * 11
+      // const top = baseTop + (Math.random() * 8 - 4) // ±4% variance
+
+      // Fully random vertical distribution (0-100%) for cloud5 for now
+      const top = Math.random() * 100
 
       cloudConfigs.push({
         id: i,
@@ -43,7 +46,7 @@ export function Clouds() {
       {clouds.map((cloud) => (
         <div
           key={cloud.id}
-          className={`cloud cloud${cloud.id + 1}`}
+          className={`cloud cloud${(cloud.id % 5) + 1}`}
           style={
             {
               animation: `cloudDrift ${cloud.duration}s linear infinite ${cloud.delay}s`,

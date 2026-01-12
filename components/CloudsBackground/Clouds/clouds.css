@@ -35,15 +35,7 @@
   /* filter: brightness(4) saturate(2) drop-shadow(0 0 15px rgba(255, 255, 255, 1)); */
 }
 
-/* iOS: Use invert to make clouds white without exceeding sRGB (no HDR trigger) */
-@supports (-webkit-touch-callout: none) {
-  .cloud {
-    filter: invert(1) brightness(1) !important;
-    opacity: 0.9;
-  }
-}
-
-.cloud1 {
+/* .cloud1 {
   background-image: url('/assets/cloud1.jpeg');
   width: 700px;
   height: 250px;
@@ -65,7 +57,7 @@
   background-image: url('/assets/cloud4.jpeg');
   width: 690px;
   height: 245px;
-}
+} */
 
 .cloud5 {
   background-image: url('/assets/cloud5.jpeg');
