@@ -35,14 +35,6 @@
   filter: brightness(4) saturate(2) drop-shadow(0 0 15px rgba(255, 255, 255, 1));
 }
 
-/* iOS HDR fix - only applies on iOS devices */
-@supports (-webkit-touch-callout: none) {
-  .cloud {
-    background-color: white;
-    background-blend-mode: screen;
-  }
-}
-
 .cloud1 {
   background-image: url('/assets/cloud1.jpeg');
   width: 700px;
