@@ -2,7 +2,7 @@
 
 For the longest time, I've always wanted to create a modern and visually catchy portfolio to showcase my journey while having fun with it. Here it is, finally coming to life - a 2000s retro game vibe website with smooth animations and dark/light theme support. More features are yet to come!
 
-Visit the site: http://zenithle.tech/
+Visit the site: http://www.zenithle.tech/
 
 ## ✨ Features
 
@@ -29,7 +29,7 @@ Visit the site: http://zenithle.tech/
 - **Language**: [TypeScript](https://www.typescriptlang.org/) for type safety
 - **Package Manager**: [pnpm](https://pnpm.io/) for early stages, now switched to [npm](https://www.npmjs.com/)
 - **CI-CD Pipeline for Deployment**: [AWS EC2](https://aws.amazon.com/ec2/) for early deployment stages, now switched to [AWS S3](https://aws.amazon.com/pm/serv-s3/?trk=a1eab8e1-44df-4b59-97a0-7f429e638b4b&sc_channel=ps&trk=a1eab8e1-44df-4b59-97a0-7f429e638b4b&sc_channel=ps&ef_id=CjwKCAiA3-3KBhBiEiwA2x7FdGL8TvhB1U5mugkKKWaIULbS_aq6AZtR2vBTWjqC0sNSoG2Mze_hdRoCic8QAvD_BwE:G:s&s_kwcid=AL!4422!3!651751060962!e!!g!!aws%20s3&gad_campaignid=19852662362&gbraid=0AAAAADjHtp9ocLtQxUmW3fdxrnCjYAdlZ&gclid=CjwKCAiA3-3KBhBiEiwA2x7FdGL8TvhB1U5mugkKKWaIULbS_aq6AZtR2vBTWjqC0sNSoG2Mze_hdRoCic8QAvD_BwE)
-- **Hosting**: [AWS S3](https://aws.amazon.com/pm/serv-s3/?trk=a1eab8e1-44df-4b59-97a0-7f429e638b4b&sc_channel=ps&trk=a1eab8e1-44df-4b59-97a0-7f429e638b4b&sc_channel=ps&ef_id=CjwKCAiA3-3KBhBiEiwA2x7FdGL8TvhB1U5mugkKKWaIULbS_aq6AZtR2vBTWjqC0sNSoG2Mze_hdRoCic8QAvD_BwE:G:s&s_kwcid=AL!4422!3!651751060962!e!!g!!aws%20s3&gad_campaignid=19852662362&gbraid=0AAAAADjHtp9ocLtQxUmW3fdxrnCjYAdlZ&gclid=CjwKCAiA3-3KBhBiEiwA2x7FdGL8TvhB1U5mugkKKWaIULbS_aq6AZtR2vBTWjqC0sNSoG2Mze_hdRoCic8QAvD_BwE) with [Squarespace](https://domains.squarespace.com/?channel=pbr&subchannel=go&campaign=pbr-go-us-en-domains_domainsalone-mix&subcampaign=(domain-en_squarespace-domain_e)&gclsrc=aw.ds&gad_source=1&gad_campaignid=23273227326&gbraid=0AAAAADxS_FI_4DSWiFPWihHRFp_kMkvvO&gclid=CjwKCAiA3-3KBhBiEiwA2x7FdHWp9IwB3g3WzePjzpX7HSVIQgLp_rWPXohqIzVasaOZpJ9LAw5KDhoC8Q8QAvD_BwE) and [CloudFlare](https://www.cloudflare.com/) for domain hosting
+- **Hosting**: [AWS S3](https://aws.amazon.com/pm/serv-s3/?trk=a1eab8e1-44df-4b59-97a0-7f429e638b4b&sc_channel=ps&trk=a1eab8e1-44df-4b59-97a0-7f429e638b4b&sc_channel=ps&ef_id=CjwKCAiA3-3KBhBiEiwA2x7FdGL8TvhB1U5mugkKKWaIULbS_aq6AZtR2vBTWjqC0sNSoG2Mze_hdRoCic8QAvD_BwE:G:s&s_kwcid=AL!4422!3!651751060962!e!!g!!aws%20s3&gad_campaignid=19852662362&gbraid=0AAAAADjHtp9ocLtQxUmW3fdxrnCjYAdlZ&gclid=CjwKCAiA3-3KBhBiEiwA2x7FdGL8TvhB1U5mugkKKWaIULbS_aq6AZtR2vBTWjqC0sNSoG2Mze_hdRoCic8QAvD_BwE) with [Squarespace](<https://domains.squarespace.com/?channel=pbr&subchannel=go&campaign=pbr-go-us-en-domains_domainsalone-mix&subcampaign=(domain-en_squarespace-domain_e)&gclsrc=aw.ds&gad_source=1&gad_campaignid=23273227326&gbraid=0AAAAADxS_FI_4DSWiFPWihHRFp_kMkvvO&gclid=CjwKCAiA3-3KBhBiEiwA2x7FdHWp9IwB3g3WzePjzpX7HSVIQgLp_rWPXohqIzVasaOZpJ9LAw5KDhoC8Q8QAvD_BwE>) and [CloudFlare](https://www.cloudflare.com/) for domain hosting
 
 ## 📁 Project Structure
 
