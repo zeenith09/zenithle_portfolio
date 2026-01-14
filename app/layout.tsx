@@ -4,6 +4,7 @@ import { ThemeProvider } from '@/lib/hooks/useTheme'
 import { BackToTop } from '@/components/BackToTop/BackToTop'
 import { ThemeSyncedBackground } from '@/components/ThemeSyncedBackground/ThemeSyncedBackground'
 import { IntroOverlayWrapper } from '@/components/IntroOverlay/IntroOverlayWrapper'
+import { RootLayoutClient } from './layout-client'
 
 import './globals.css'
 
@@ -81,7 +82,7 @@ export default function RootLayout({
         <ThemeProvider>
           <Header />
 
-          {children}
+          <RootLayoutClient>{children}</RootLayoutClient>
 
           <BackToTop />
         </ThemeProvider>
