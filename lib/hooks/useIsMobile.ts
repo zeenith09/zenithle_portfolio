@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 
 /**
  * Hook to detect if viewport is mobile size
- * Returns true if viewport width is less than 950px (Header breakpoint for Surface Pro)
+ * Returns true if viewport width is less than 1060px (Header breakpoint for Surface Pro)
  */
 export function useIsMobile(): boolean {
   const [isMobile, setIsMobile] = useState(false)
@@ -15,7 +15,7 @@ export function useIsMobile(): boolean {
     
     // Check initial size
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 950)
+      setIsMobile(window.innerWidth < 1060)
     }
     
     checkMobile()

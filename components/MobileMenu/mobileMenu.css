@@ -19,7 +19,7 @@
 .menu-line {
   width: 1.5rem;
   height: 0.125rem;
-  background-color: currentColor;
+  background-color: rgb(0, 0, 0);
   border-radius: 0.125rem;
 }
 

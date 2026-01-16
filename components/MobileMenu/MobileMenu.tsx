@@ -8,14 +8,7 @@ interface MobileMenuProps {
   onToggle: () => void
 }
 
-/**
- * Mobile Menu component - Hamburger menu for mobile devices
- * T036: Hamburger icon button for mobile navigation
- * T039: Open/close animation for hamburger menu
- * T043: ARIA labels for hamburger button (aria-expanded, aria-controls)
- */
 export function MobileMenu({ isOpen, onToggle }: MobileMenuProps) {
-  // T039: Hamburger icon animation variants
   const topLineVariants = {
     closed: { rotate: 0, y: 0 },
     open: { rotate: 45, y: 8 },
