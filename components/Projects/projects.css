@@ -88,10 +88,10 @@
 
 .project-links a {
   font-size: 0.875rem;
-  text-decoration: underline;
   transition: color 0.3s ease;
 }
 
 .project-links a:hover {
   color: var(--color-primary);
+  text-decoration: underline;
 }
