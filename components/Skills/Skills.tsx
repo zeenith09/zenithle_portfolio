@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { Section } from '@/components/Section/Section'
-import { languages, tools, growing, type Skill } from '@/lib/data/skills'
+import { languages_frameworks, tools, growing, type Skill } from '@/lib/data/skills'
 import './skills.css'
 
 type SkillCategory = {
@@ -22,7 +22,7 @@ export function Skills() {
         // Intro overlay is done, load the data
         setMounted(true)
         setCategories([
-          { name: 'Languages', skills: languages },
+          { name: 'Languages & Frameworks', skills: languages_frameworks },
           { name: 'Core Tools', skills: tools },
           { name: 'Learning/Growing', skills: growing },
         ])

@@ -61,8 +61,8 @@
 }
 
 .project-card p {
-  font-size: 0.875rem;
-  margin-top: 1rem;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 1.15rem;
   margin-bottom: 1rem;
 }
 
