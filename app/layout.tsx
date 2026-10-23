@@ -1,4 +1,4 @@
-import { Press_Start_2P } from 'next/font/google'
+import { Press_Start_2P, Space_Grotesk } from 'next/font/google'
 import dynamic from 'next/dynamic'
 import { ThemeProvider } from '@/lib/hooks/useTheme'
 import { BackToTop } from '@/components/BackToTop/BackToTop'
@@ -18,6 +18,11 @@ const pixelFont = Press_Start_2P({
   weight: '400',
   subsets: ['latin'],
   variable: '--font-pixel',
+})
+
+const sansFont = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-sans',
 })
 
 export const metadata = {
@@ -71,7 +76,7 @@ export default function RootLayout({
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content="/opengraph-image.png" />
       </head>
-      <body className={pixelFont.variable}>
+      <body className={`${pixelFont.variable} ${sansFont.variable}`}>
         <ThemeSyncedBackground />
         <IntroOverlayWrapper />
 

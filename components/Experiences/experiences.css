@@ -88,7 +88,8 @@
 }
 
 .experience-description {
-  font-size: 0.875rem;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 1rem;
   white-space: pre-wrap;
-  line-height: 1.6;
+  line-height: 1.65;
 }

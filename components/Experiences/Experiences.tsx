@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { Section } from '@/components/Section/Section'
+// @ts-ignore CSS is loaded by the framework bundler and has no TypeScript module declaration.
 import './experiences.css'
 
 type Experience = {
@@ -14,30 +15,40 @@ type Experience = {
 
 const experienceData: Experience[] = [
   {
+    role: 'Full-stack Engineering Intern',
+    company: 'Blue Seagull Compute',
+    period: 'February 2026 – Present',
+    description: `• Designed and implemented the public-facing company website (https://www.blueseagull.org) and production-facing frontend Laridae features using Figma, React, Next.js, TypeScript, Tailwind CSS, and Redux, connecting frontend state and user workflows to REST APIs and WebSocket event streams.
+• Contributed to backend development supporting application catalogs, authentication, session lifecycle actions, state persistence, and normalized error handling.
+• Served as the technical bridge between senior engineers and the frontend team, translating backend architecture decisions into actionable frontend implementation.`,
+    current: true,
+  },
+  {
     role: 'Software Engineering Intern',
     company: 'Northwestern Mutual',
     period: 'May 2025 – December 2025',
-    description: `• Engineered and maintained features for internal AI chatbots with React, Next.js, and TypeScript serving 1,000+ employees.
-• Designed scalable backend microservices and REST APIs using DynamoDB and JWT authentication.
-• Improved code coverage from 40% to 100% by integrating SonarQube into Docker-based CI/CD pipelines.
-• Gained exposure to product experimentation through Optimizely CMS, Heap.io, and Adobe Analytics.`,
-    current: false,
-  },
-  {
-    role: 'Team Lead & Developer',
-    company: 'UW-Milwaukee Nonprof-IT Program',
-    period: 'September 2024 – December 2025',
-    description: `• Spearheaded cross-functional Agile teams for end-to-end frontend development and website migrations for 3 nonprofits.
-• Executed full platform transitions to customized WordPress and Wix deployments managing hosting and DNS.
-• Standardized technical documentation and reusable style guides to strengthen maintainability.`,
+    description: `• Engineered frontend features for internal AI chatbots using React, Next.js,TypeScript, and SCSS enabling persistent saving and retrieval of conversation flows for 1,000+ employees.
+• Utilized Optimizely CMS, Heap.io, and Adobe Analytics to support UI development across embedded and full-page AI chatbot experiences.
+• Designed and implemented scalable backend microservices and REST APIs using DynamoDB and JWT authentication, managing user data and favorites securely across an existing microservices ecosystem.
+• Improved code quality and release reliability by integrating SonarQube into Docker and Kubernetes-managed CI/CD pipelines, increasing code coverage from 40% to 100%.`,
     current: false,
   },
   {
     role: 'Help Desk Supervisor',
     company: 'UW-Milwaukee Campus Technology Support',
     period: 'September 2024 – December 2025',
-    description: `• Supported daily help desk operations handling hundreds of active tickets using Ivanti Neurons.
-• Analyzed ticket metrics to allocate workload and resolved advanced technical issues through collaboration.`,
+    description: `• Supervised 5 - 8 student consultants per shift, using Ivanti Neurons ticket metrics to balance workloads and maintain service quality during high-volume periods, including mass incidents involving hundreds of tickets.
+• Administered Microsoft 365, student accounts, and Multi-Factor Authentication (MFA) configurations, managing sensitive student information under strict privacy standards.
+• Collaborated across IT teams to escalate and resolve advanced hardware and software issues, translating technical details into clear guidance for end users at all levels.`,
+    current: false,
+  },
+  {
+    role: 'Team Lead & Developer',
+    company: 'UW-Milwaukee Nonprof-IT Program',
+    period: 'September 2024 – December 2025',
+    description: `• Led Agile teams to modernize 3 nonprofit platforms from scratch for Milwaukee Hope Initiative, Nature Eagle Trail, and TrueSkool, improving digital presence and driving a 40% peak increase in site traffic.
+• Executed full platform migrations to customized WordPress and Wix deployments, managing hosting, DNS configuration, and production releases, eliminating recurring hosting expenses.
+• Standardized technical documentation and reusable style guides to strengthen maintainability.`,
     current: false,
   },
 ]
