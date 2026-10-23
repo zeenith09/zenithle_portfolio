@@ -13,7 +13,7 @@ export function About() {
     <Section id="about" title="About">
       <div className="about-container">
         <h3 className="about-tagline">
-          Frontend / UI-focused Software Engineer who cares about clean
+          Full-stack UX/UI-focused Software Engineer who cares about clean
           interfaces, accessibility, and building things people actually enjoy
           using.
         </h3>
@@ -22,17 +22,23 @@ export function About() {
           <ul className="about-focus-list">
             <li>
               <strong>🔭 Currently working on</strong>
-              Turning a Figma UI/UX project into a fully functional,
-              cross-device web application
+              <span>
+                Turning a Figma UI/UX project into a fully functional,
+                cross-device web application
+              </span>
             </li>
             <li>
               <strong>🌱 Currently learning</strong>
-              Expanding my knowledge for Amazon Web Services (AWS) and backend
-              services
+              <span>
+                Expanding my knowledge for Amazon Web Services (AWS) and backend
+                services
+              </span>
             </li>
             <li>
               <strong>👯 Looking for</strong>
-              Volunteer or opportunities where design + engineering overlap
+              <span>
+                Volunteer or opportunities where design + engineering overlap
+              </span>
             </li>
           </ul>
         </div>

@@ -45,6 +45,7 @@
   margin: 0;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  font-family: var(--font-sans), sans-serif;
 }
 
 .dark .about-tagline {
@@ -53,7 +54,7 @@
 
 @media (min-width: 768px) {
   .about-tagline {
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     padding: 2rem;
   }
 }
@@ -78,7 +79,8 @@
 
 @media (max-width: 1399px) {
   .about-focus-list,
-  .about-focus-list strong {
+  .about-focus-list strong,
+  .about-focus-list li span {
     text-align: center;
     margin: 0 auto;
   }
@@ -102,6 +104,11 @@
   word-wrap: break-word;
   overflow-wrap: break-word;
   flex-wrap: wrap;
+}
+
+.about-focus-list li span {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 1.15rem;
 }
 
 @media (min-width: 768px) {
