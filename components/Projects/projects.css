@@ -12,7 +12,7 @@
 
 @media (min-width: 750px) {
   .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -29,22 +29,7 @@
   transition: box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
-}
-
-/* For most phones */
-@media (max-width: 749px) {
-  .project-card {
-    width: 370px;
-    margin: 0 auto;
-  }
-}
-
-/* For extra small phones */
-@media (max-width: 390px) {
-  .project-card {
-    width: 325px;
-    margin: 0 auto;
-  }
+  min-width: 0;
 }
 
 .project-card:hover {

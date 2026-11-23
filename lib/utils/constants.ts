@@ -11,8 +11,8 @@ export interface NavItem {
 export const NAV_ITEMS: NavItem[] = [
   { id: 'about', label: 'About', href: '#about' },
   { id: 'skills', label: 'Skills', href: '#skills' },
-  { id: 'projects', label: 'Public Projects', href: '#projects' },
   { id: 'experiences', label: 'Experiences', href: '#experiences' },
+  { id: 'projects', label: 'Projects', href: '#projects' },
   { id: 'contact', label: 'Contact', href: '#contact', isCallToAction: true },
 ]
 
@@ -29,8 +29,8 @@ export const SECTIONS: SectionConfig[] = [
   { id: 'hero', title: 'Welcome', order: 1 },
   { id: 'about', title: 'About', order: 2 },
   { id: 'skills', title: 'Skills', order: 3 },
-  { id: 'projects', title: 'Public Projects', order: 4 },
-  { id: 'experiences', title: 'Experiences', order: 5 },
+  { id: 'experiences', title: 'Experiences', order: 4 },
+  { id: 'projects', title: 'Projects', order: 5 },
   { id: 'contact', title: 'Contact', order: 6 },
 ]
 

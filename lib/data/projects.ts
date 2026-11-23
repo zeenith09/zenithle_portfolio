@@ -10,7 +10,7 @@ export type Project = {
   links: ProjectLink[]
 }
 
-export const projects: Project[] = [
+export const public_projects: Project[] = [
   {
     title: 'Countersign',
     description:
@@ -25,6 +25,22 @@ export const projects: Project[] = [
       {
         label: 'Live Demo',
         href: 'https://countersign-iota.vercel.app/'
+      },
+    ],
+  },
+  {
+    title: 'Retro Portfolio',
+    description:
+      'Current page. GameBoy-inspired retro portfolio, built with a responsive, accessible website in mind.',
+    technologies: ['AWS EC2', 'AWS S3', 'SEO', 'CI/CD via GitHub Action', 'Testing Suites', 'Arcade'],
+    links: [
+      {
+        label: 'GitHub',
+        href: 'https://github.com/zeenith09/zenithle_portfolio',
+      },
+      {
+        label: 'Live Site',
+        href: 'https://zenithle.tech/'
       },
     ],
   },
@@ -89,6 +105,37 @@ export const projects: Project[] = [
         label: 'Learn More',
         href: 'https://linktr.ee/trueskool_nonprofIT/',
       }
+    ],
+  },
+]
+
+export const other_projects: Project[] = [
+  {
+    title: 'Internal SOIS Lab Website',
+    description:
+      'Conceptualized and developed an immersive "Beyond the Static" digital presence for an academic research laboratory',
+    technologies: ['Interactive', 'Design', 'Prototyping', 'UI/UX'],
+    links: [
+    ],
+  },
+  {
+    title: 'PAWS360 - OverCoded App',
+    description:
+      'Awarded Best Senior Capstone Project for Computer Science. Consolidated two legacy systems into one scalable student porta',
+    technologies: ['Next.js', 'TypeScript', 'React', 'PostgreSQL', 'Spring Boot', 'Spec-driven Development'],
+    links: [
+      {
+        label: 'Please scroll to Computer Science > Select "OverCoded App"',
+        href: 'https://uwm.edu/engineering/students/senior-design-projects/fall-2025-senior-design-projects/'
+      },
+    ],
+  },
+  {
+    title: 'Teaching Assistant Schedule Website',
+    description:
+      'Web-based scheduling system for Teaching Assistants using Python and Django',
+    technologies: ['Django', 'Python', 'Test-drive Development (TDD)', 'CRUD', 'Scrum', 'Agile'],
+    links: [
     ],
   },
 ]
