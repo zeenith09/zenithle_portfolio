@@ -12,6 +12,23 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: 'Countersign',
+    description:
+      'Human-in-the-Loop Approval Layer for AI Agents. Backend and ML development in progress...',
+    technologies: ['AI Agent Governance', 'Prisma', 'Next.js', 'TypeScript', 'PostgreSQL', 'Neon',
+    ],
+    links: [
+      {
+        label: 'GitHub',
+        href: 'https://github.com/zeenith09/countersign',
+      },
+      {
+        label: 'Live Demo',
+        href: 'https://countersign-iota.vercel.app/'
+      },
+    ],
+  },
+  {
     title: 'Study with Me',
     description:
       'Prototype for a collaborative study platform with gamified elements and more. Development in progress...',
